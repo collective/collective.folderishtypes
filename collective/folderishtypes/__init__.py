@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+#
+# GNU General Public License (GPL)
+#
+__author__ = """Johannes Raggam <johannes@raggam.co.at>"""
+__docformat__ = 'plaintext'
+
 from zope.i18nmessageid import MessageFactory
 from collective.folderishtypes import config
 
@@ -9,7 +16,7 @@ MsgFact = MessageFactory('collective.folderishtypes')
 def initialize(context):
     """Register content types through Archetypes with Zope and the CMF.
     """
-    from content import folderish_event #, folderish_document
+    from content import folderish_event, folderish_document, folderish_newsitem
 
     content_types, constructors, ftis = atapi.process_types(
         atapi.listTypes(config.PROJECTNAME),

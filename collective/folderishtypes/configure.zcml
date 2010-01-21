@@ -13,7 +13,7 @@
         title="collective.folderishtypes: default"
         directory="profiles/default"
         description="collective.folderishtypes default profile: Installs
-                     the folderish contenty types in Plone."
+                     the folderish content types in Plone."
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 

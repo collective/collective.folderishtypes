@@ -7,20 +7,20 @@ __docformat__ = 'plaintext'
 
 from zope.interface import implements
 from Products.Archetypes import atapi
-from Products.ATContentTypes.content import event
+from Products.ATContentTypes.content import newsitem
 from Products.ATContentTypes.content import folder
 
-from collective.folderishtypes.interfaces import IFolderishEvent
+from collective.folderishtypes.interfaces import IFolderishNewsItem
 from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-event_schema = event.ATEventSchema.copy()
+newsitem_schema = newsitem.ATNewsItemSchema .copy()
 
-class FolderishEvent(folder.ATFolder, event.ATEvent):
-    implements(IFolderishEvent)
-    portal_type = "Folderish Event"
+class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
+    implements(IFolderishNewsItem)
+    portal_type = "Folderish News Item"
     _at_rename_after_creation = True
-    schema = event_schema + folder_schema
+    schema = newsitem_schema + folder_schema
 
-atapi.registerType(FolderishEvent, PROJECTNAME)
+atapi.registerType(FolderishNewsItem, PROJECTNAME)
