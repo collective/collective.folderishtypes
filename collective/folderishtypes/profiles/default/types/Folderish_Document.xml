@@ -4,8 +4,7 @@
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
  <property name="title" i18n:translate="">Page</property>
- <property name="description" i18n:translate="">A page in the site. Can contain
- rich text and behaves like a folder.</property>
+ <property name="description" i18n:translate="">A page in the site. Can contain rich text and behaves like a folder.</property>
  <property name="content_icon">++resource++folderish_document.png</property>
 
  <property name="content_meta_type">FolderishDocument</property>
