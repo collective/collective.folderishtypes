@@ -3,10 +3,44 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.folderishtypes">
 
+    <browser:resource
+        name="folderish_document.png"
+        image="folderish_document.png"
+        />
+    <browser:resource
+        name="folderish_event.png"
+        image="folderish_event.png"
+        />
+    <browser:resource
+        name="folderish_newsitem.png"
+        image="folderish_newsitem.png"
+        />
+
     <browser:page
-        for="..interfaces.IFolderishEvent"
-        name="view"
-        template="folderish_event.pt"
+        for="Products.ATContentTypes.interfaces.folder.IATFolder"
+        name="folder_listing"
+        template="folder_listing.pt"
+        permission="zope2.View"
+        />
+    <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="folder_listing"
+        template="folder_listing.pt"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="Products.ATContentTypes.interfaces.folder.IATFolder"
+        name="folder_summary_view"
+        template="folder_summary_view.pt"
+        permission="zope2.View"
+        />
+    <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
+    <browser:page
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="folder_summary_view"
+        template="folder_summary_view.pt"
         permission="zope2.View"
         />
 

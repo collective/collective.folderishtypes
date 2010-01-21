@@ -6,7 +6,7 @@
  <property name="title" i18n:translate="">Folderish Event</property>
  <property name="description"
      i18n:translate="">An Event with folderish behaviour.</property>
- <property name="content_icon"></property>
+ <property name="content_icon">++resource++folderish_event.png</property>
 
  <property name="content_meta_type">Folderish Event</property>
  <property name="product">collective.folderishtypes</property>
