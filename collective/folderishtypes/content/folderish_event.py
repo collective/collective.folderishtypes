@@ -2,20 +2,16 @@ from zope.interface import implements
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content import event
 from Products.ATContentTypes.content import folder
-from Products.ATContentTypes.interfaces import IATEvent
-
 
 from collective.folderishtypes.interfaces import IFolderishEvent
 from collective.folderishtypes.config import PROJECTNAME
 
-import pdb;pdb.set_trace()
-# test = FolderishEvent()
-# assert(IATEvent.providedBy(test))
+FolderishEventSchema = event.ATEventSchema.copy() + folder.ATFolderSchema.copy()
 
-class FolderishEvent(event.ATEvent, folder.ATFolder):
-    # implements(IFolderishEvent)
+class FolderishEvent(folder.ATFolder, event.ATEvent):
+    implements(IFolderishEvent)
     portal_type = "Folderish Event"
+    _at_rename_after_creation = True
+    schema = FolderishEventSchema
 
-atapi.registerType(VenueFolder, PROJECTNAME)
-
-
+atapi.registerType(FolderishEvent, PROJECTNAME)
