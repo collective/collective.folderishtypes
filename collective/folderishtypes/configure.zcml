@@ -3,5 +3,17 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="collective.folderishtypes">
 
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package=".browser" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="collective.folderishtypes: default"
+        directory="profiles/default"
+        description="collective.folderishtypes default profile: Installs
+                     the folderish contenty types in Plone."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
 
 </configure>
