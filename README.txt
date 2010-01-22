@@ -11,6 +11,7 @@ Johannes Raggam <johannes@raggam.co.at>
 
 TODO
 ====
+- Add "Folderish Event" to CalendarTool
 - Write tests
 - If needed: provide an alternative view for
   Products/CMFPlone/skins/plone_templates/events_listing
