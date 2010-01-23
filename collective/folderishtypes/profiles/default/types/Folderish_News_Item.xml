@@ -18,6 +18,7 @@
  <property name="allowed_content_types">
      <element value="Image" />
      <element value="File" />
+     <element value="Folderish Subfolder" />
  </property>
 
  <property name="allow_discussion">False</property>
