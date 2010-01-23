@@ -1,5 +1,6 @@
 Introduction
 ============
+
 Provides the types "Folderish Event", "Folderish News Item" and
 "Folderish Document" as replacements for their ATContentTypes equivalents and
 a "Folderish Subfolder" which can be added as a subfolder to the three ATCT
@@ -14,21 +15,33 @@ You can override these limits by providing Generic Setup import steps for all
 Folderish_* types.
 
 
-Author
-======
-Johannes Raggam <johannes@raggam.co.at>
-
-
 TODO
 ====
-- Add "Folderish Event" to CalendarTool
+
+- Internationalize it (viewlet's header)
 - Write tests
 - If needed: provide an alternative view for
   Products/CMFPlone/skins/plone_templates/events_listing
+- Bump version to 1.0 after that is done
+DONE - Add "Folderish Event" to CalendarTool
+DONE - Add viewlet below content body to display the item's contained items
+
+
+Tested with
+===========
+
+Plone 4
+
+
+Author
+======
+
+Johannes Raggam <johannes@raggam.co.at>
 
 
 Changes to templates
 ====================
+
 $ diff collective.folderishtypes/collective/folderishtypes/browser/folder_listing.pt Plone/Products/CMFPlone/skins/plone_content/folder_listing.pt
 38,41c38,39
 <              tal:attributes="class python:bool(context.Format() in
