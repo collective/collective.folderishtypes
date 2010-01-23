@@ -7,11 +7,11 @@ __docformat__ = 'plaintext'
 
 from zope.interface import Interface
 
-class IFolderishEvent(Interface):
+class IFolderishDocument(Interface):
     """ Marker interface
     """
 
-class IFolderishDocument(Interface):
+class IFolderishEvent(Interface):
     """ Marker interface
     """
 
