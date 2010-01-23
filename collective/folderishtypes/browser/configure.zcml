@@ -3,6 +3,10 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="plone">
 
+	<browser:resource
+        name="folderishtypes.css"
+        file="folderishtypes.css"
+        />
     <browser:resource
         name="folderish_document.png"
         image="folderish_document.png"
@@ -42,6 +46,32 @@
         name="folder_summary_view"
         template="folder_summary_view.pt"
         permission="zope2.View"
+        />
+
+	<!-- viewlet for listings in folderish types -->
+	<browser:viewlet
+		for="..interfaces.IFolderishDocument"
+        name="collective.folderishtypes.folderish_listing_viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class="plone.app.layout.viewlets.common.ViewletBase"
+        permission="zope2.View"
+		template="folderish_listing_viewlet.pt"
+        />
+	<browser:viewlet
+		for="..interfaces.IFolderishEvent"
+		name="collective.folderishtypes.folderish_listing_viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class="plone.app.layout.viewlets.common.ViewletBase"
+        permission="zope2.View"
+		template="folderish_listing_viewlet.pt"
+        />
+	<browser:viewlet
+		for="..interfaces.IFolderishNewsItem"
+		name="collective.folderishtypes.folderish_listing_viewlet"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class="plone.app.layout.viewlets.common.ViewletBase"
+        permission="zope2.View"
+		template="folderish_listing_viewlet.pt"
         />
 
 </configure>
