@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step
+    id="collective.folderishtypes-default"
+    handler="collective.folderishtypes.setuphandlers.setup"
+    title="collective.folderishtypes default setup"
+    version="1.0">
+    <dependency step="plone-final"/>
+  </import-step>
+</import-steps>
