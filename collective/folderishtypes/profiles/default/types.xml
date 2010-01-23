@@ -7,6 +7,8 @@
     meta_type="Factory-based Type Information with dynamic views"/>
   <object name="Folderish News Item"
     meta_type="Factory-based Type Information with dynamic views"/>
+  <object name="Folderish Subfolder"
+    meta_type="Factory-based Type Information with dynamic views"/>
 
   <!-- Remove old CT -->
   <object name="Document"
