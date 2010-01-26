@@ -19,7 +19,8 @@ event_schema = event.ATEventSchema.copy()
 
 class FolderishEvent(folder.ATFolder, event.ATEvent):
     implements(IFolderishEvent)
-    portal_type = "Folderish Event"
+    portal_type = 'Folderish Event'
+    archetype_name = 'Folderish Event'
     _at_rename_after_creation = True
     schema = event_schema + folder_schema
 

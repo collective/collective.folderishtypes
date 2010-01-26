@@ -19,7 +19,8 @@ newsitem_schema = newsitem.ATNewsItemSchema .copy()
 
 class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
     implements(IFolderishNewsItem)
-    portal_type = "Folderish News Item"
+    portal_type = 'Folderish News Item'
+    archetype_name = 'Folderish News Item'
     _at_rename_after_creation = True
     schema = newsitem_schema + folder_schema
 

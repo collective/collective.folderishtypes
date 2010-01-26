@@ -3,7 +3,7 @@
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
- <property name="title" i18n:translate="">News Item</property>
+ <property name="title" i18n:translate="">News Item with Folder</property>
  <property name="description" i18n:translate="">An announcement that will show up on the news portlet and in the news listing with folderish behavior.</property>
  <property name="content_icon">++resource++folderish_newsitem.png</property>
 

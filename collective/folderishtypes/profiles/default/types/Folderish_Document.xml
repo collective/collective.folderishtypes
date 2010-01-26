@@ -3,7 +3,7 @@
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
- <property name="title" i18n:translate="">Page</property>
+ <property name="title" i18n:translate="">Page with Folder</property>
  <property name="description" i18n:translate="">A page in the site. Can contain rich text and behaves like a folder.</property>
  <property name="content_icon">++resource++folderish_document.png</property>
 
