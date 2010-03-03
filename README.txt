@@ -2,14 +2,8 @@ Introduction
 ============
 
 Provides the types "Folderish Event", "Folderish News Item" and
-"Folderish Document" as replacements for their ATContentTypes equivalents and
-a "Folderish Subfolder" which can be added as a subfolder to the three ATCT
-replacement types.
-
-Those types are able to hold Images, Files and the Folderish Subfolders - which
-itself can hold again Images, Files and Folderish Subfolders. The purpose of the
-Folderish Subfolders is to limit the possible types which can be added to the
-ATCT replacement types while allowing to build a nested hierachy.
+"Folderish Document" as replacements for their ATContentTypes equivalents.
+Those types are able to hold Images, Files and Folders.
 
 You can override these limits by providing Generic Setup import steps for all
 Folderish_* types.
@@ -109,5 +103,3 @@ $ diff collective.folderishtypes/collective/folderishtypes/browser/folder_summar
 <                            tal:attributes="href python:bool(item_type in use_view_action) and str(item_url+'/view') or str(item_url);"
 ---
 >                            tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);"
-
-
