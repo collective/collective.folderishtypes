@@ -69,7 +69,7 @@
                                ">
                 <metal:block define-slot="entry">
                 <dt metal:define-macro="listitem"
-                    tal:attributes="class python:item_type in calendar_types and 'vevent' or '')">
+                    tal:attributes="class python:item_type in calendar_types and 'vevent' or ''">
 
                     <span class="summary"
                           tal:attributes="class string:$item_type_class summary">
