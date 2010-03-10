@@ -26,6 +26,12 @@
         template="folder_listing.pt"
         permission="zope2.View"
         />
+	<browser:page
+        for="Products.ATContentTypes.interfaces.topic.IATTopic"
+        name="folder_listing"
+        template="folder_listing.pt"
+		permission="zope2.View"
+	/>
     <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
     <browser:page
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
@@ -36,6 +42,12 @@
 
     <browser:page
         for="Products.ATContentTypes.interfaces.folder.IATFolder"
+        name="folder_summary_view"
+        template="folder_summary_view.pt"
+        permission="zope2.View"
+        />
+    <browser:page
+        for="Products.ATContentTypes.interfaces.topic.IATTopic"
         name="folder_summary_view"
         template="folder_summary_view.pt"
         permission="zope2.View"
