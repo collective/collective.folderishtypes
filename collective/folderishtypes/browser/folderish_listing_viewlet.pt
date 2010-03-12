@@ -1,13 +1,6 @@
-<tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
-                    limit_display limit_display|request/limit_display|nothing;
-                    more_url more_url|request/more_url|string:folder_contents;
-                    is_a_topic python:context.portal_type=='Topic';
-                    folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(contentFilter, batch=True) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
+<tal:foldercontents define="folderContents context/getFolderContents|nothing;
                     site_properties context/portal_properties/site_properties;
                     use_view_action site_properties/typesUseViewActionInListings|python:();
-                    over_limit python: limit_display and len(folderContents) > limit_display;
-                    folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
-                    batch folderContents;
                     isAnon context/@@plone_portal_state/anonymous;
                     normalizeString nocall: context/plone_utils/normalizeString;
                     toLocalizedTime nocall: context/@@plone/toLocalizedTime;
