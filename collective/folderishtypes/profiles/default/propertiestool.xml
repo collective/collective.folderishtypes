@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_properties" meta_type="Plone Properties Tool">
  <object name="site_properties" meta_type="Plone Property Sheet">
-  <property name="default_page_types" type="lines">
-   <element value="Topic"/>
+  <property name="default_page_types" type="lines" purge="False">
    <element value="Folderish Document"/>
    <element value="Folderish Event"/>
    <element value="Folderish News Item"/>
