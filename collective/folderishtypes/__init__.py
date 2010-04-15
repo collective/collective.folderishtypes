@@ -6,10 +6,15 @@ __author__ = """Johannes Raggam <johannes@raggam.co.at>"""
 __docformat__ = 'plaintext'
 
 from zope.i18nmessageid import MessageFactory
-from collective.folderishtypes import config
-
-from Products.Archetypes import atapi
 from Products.CMFCore import utils
+
+try:
+    from Products.LinguaPlone import public  as atapi
+except ImportError:
+    # No multilingual support
+    from Products.Archetypes import atapi
+
+from collective.folderishtypes import config
 
 MsgFact = MessageFactory('collective.folderishtypes')
 
