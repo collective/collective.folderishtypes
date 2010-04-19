@@ -24,8 +24,8 @@ document_schema = document.ATDocumentSchema.copy()
 
 class FolderishDocument(folder.ATFolder, document.ATDocument):
     implements(IFolderishDocument)
+
     portal_type = 'Folderish Document'
-    archetype_name = 'Folderish Document'
     _at_rename_after_creation = True
     schema = document_schema + folder_schema
 
