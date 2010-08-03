@@ -1,0 +1,156 @@
+<dl class="portlet portletFolderishListing"
+    tal:condition="view/show_me">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span class="tile">Contents of current Object</span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+
+
+<tal:foldercontents define="folderContents context/getFolderContents|nothing;
+                    site_properties context/portal_properties/site_properties;
+                    use_view_action site_properties/typesUseViewActionInListings|python:();
+                    isAnon context/@@plone_portal_state/anonymous;
+                    normalizeString nocall: context/plone_utils/normalizeString;
+                    toLocalizedTime nocall: context/@@plone/toLocalizedTime;
+                    getIcon nocall: context/@@plone/getIcon;
+                    show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
+                    navigation_root_url context/@@plone_portal_state/navigation_root_url;
+                    pas_member context/@@pas_member;">
+<tal:listing condition="folderContents">
+
+<div id="folderishtypes-folderlisting">
+    <h2 tal:content="string:Contents of ${context/Title}">Contents of ITEM</h2>
+    <dl>
+        <tal:entry tal:repeat="item folderContents">
+        <tal:block tal:define="item_url item/getURL|item/absolute_url;
+                               item_id item/getId|item/id;
+                               item_title_or_id item/pretty_title_or_id;
+                               item_description item/Description;
+                               item_type item/portal_type;
+                               item_type_title item/Type;
+                               item_modified item/ModificationDate;
+                               item_created item/CreationDate;
+                               item_icon python:getIcon(item);
+                               item_type_class python:'contenttype-' + normalizeString(item_type);
+                               item_wf_state item/review_state|python: context.portal_workflow.getInfoFor(item, 'review_state', '');
+                               item_wf_state_class python:'state-' + normalizeString(item_wf_state);
+                               item_creator item/Creator;
+                               item_start item/start/ISO|item/StartDate|nothing;
+                               item_end item/end/ISO|item/EndDate|nothing;
+                               calendar_types context/portal_calendar/calendar_types;
+                               item_view_url python:bool(item_type in use_view_action) and str(item_url+'/view') or item_url
+                           ">
+
+                <dt metal:define-macro="listitem"
+                    tal:attributes="class python:item_type in calendar_types and 'vevent' or ''">
+
+                    <span class="summary"
+                          tal:attributes="class string:$item_type_class summary">
+                        <img tal:replace="structure item_icon/html_tag" />
+                        <a href="#"
+                           tal:attributes="href item_view_url"
+                           tal:content="item_title_or_id">
+                            Item Title
+                        </a>
+                    </span>
+
+                    <span class="documentByLine">
+                        <tal:event condition="python:item_type in calendar_types">
+                        <span tal:condition="item/location"
+                              i18n:translate="label_event_byline">
+                            (<span tal:content="string:${item/location}"
+                                   class="location"
+                                   i18n:name="location">Oslo</span>, from
+                             <abbr class="dtstart"
+                                   tal:attributes="title python:item_start"
+                                   tal:content="python:toLocalizedTime(item_start,long_format=1)"
+                                   i18n:name="start">from date</abbr> to
+                             <abbr class="dtend"
+                                   tal:attributes="title python:item_end"
+                                   tal:content="python:toLocalizedTime(item_end,long_format=1)"
+                                   i18n:name="end">to date</abbr>)
+                        </span>
+                        <span tal:condition="not:item/location"
+                              i18n:translate="label_event_byline_without_location">
+                            (from
+                             <abbr class="dtstart"
+                                   tal:attributes="title python:item_start"
+                                   tal:content="python:toLocalizedTime(item_start,long_format=1)"
+                                   i18n:name="start">from date</abbr> to
+                             <abbr class="dtend"
+                                   tal:attributes="title python:item_end"
+                                   tal:content="python:toLocalizedTime(item_end,long_format=1)"
+                                   i18n:name="end">to date</abbr>)
+                        </span>
+                        </tal:event>
+
+                        <tal:byline condition="show_about">
+                            &mdash;
+
+                            <tal:name tal:condition="item_creator"
+                                tal:define="author python:pas_member.info(item_creator);
+                                            creator_short_form author/username;
+                                            creator_long_form string:?author=${author/username};
+                                            creator_is_openid python:'/' in creator_short_form;
+                                            creator_id python:(creator_short_form, creator_long_form)[creator_is_openid];">
+                              <span i18n:translate="label_by_author">
+                                by
+                              <a href="#"
+                                 tal:attributes="href string:${navigation_root_url}/author/${item_creator}"
+                                 tal:content="author/name_or_id"
+                                 tal:omit-tag="not:author"
+                                 i18n:name="author">
+                                Bob Dobalina
+                              </a>
+                              </span>
+
+                            </tal:name>
+
+                            <tal:modified condition="python:item_type not in calendar_types">
+                                &mdash;
+                                <tal:mod i18n:translate="box_last_modified">
+                                  last modified
+                                </tal:mod>
+                                <span tal:replace="python:toLocalizedTime(item_modified,long_format=1)">
+                                  August 16, 2001 at 23:35:59
+                                </span>
+                            </tal:modified>
+
+                            <metal:description define-slot="description_slot">
+                                <tal:comment replace="nothing">
+                                    Place custom listing info for custom types here
+                                </tal:comment>
+                            </metal:description>
+                        </tal:byline>
+                    </span>
+
+                </dt>
+
+                <dd>
+                    <span tal:omit-tag=""
+                          tal:condition="not:item_description">
+                        &nbsp;
+                    </span>
+                    <span class="description"
+                           tal:condition="item_description"
+                           tal:content="item_description">
+                        description
+                    </span>
+                </dd>
+
+        </tal:block>
+        </tal:entry>
+    </dl>
+</div>
+
+</tal:listing>
+</tal:foldercontents>
+
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
