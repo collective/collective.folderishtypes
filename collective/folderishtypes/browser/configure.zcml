@@ -93,6 +93,10 @@
         assignment=".listing_portlet.Assignment"
         renderer=".listing_portlet.Renderer"
         addview=".listing_portlet.AddForm"
-        />
+        view_permission="cmf.ModifyPortalContent"
+        edit_permission="cmf.ModifyPortalContent"
+        /><!-- view_permission, edit_permission: we don't have any effect except
+               if you remove us, we will break existing installs. we love you.
+			   -->
 
 </configure>
