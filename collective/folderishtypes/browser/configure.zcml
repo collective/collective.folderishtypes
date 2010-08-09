@@ -93,8 +93,6 @@
         assignment=".listing_portlet.Assignment"
         renderer=".listing_portlet.Renderer"
         addview=".listing_portlet.AddForm"
-        view_permission="cmf.ModifyPortalContent"
-        edit_permission="cmf.ModifyPortalContent"
         />
 
 </configure>

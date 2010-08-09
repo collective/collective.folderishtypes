@@ -1,5 +1,4 @@
-<dl class="portlet portletFolderishListing"
-    tal:condition="view/show_me">
+<dl class="portlet portletFolderishListing">
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>

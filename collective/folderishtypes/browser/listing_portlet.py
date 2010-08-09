@@ -11,6 +11,9 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
 
+from Acquisition import aq_inner
+from zope.component import getMultiAdapter
+
 from collective.folderishtypes import MsgFact as _
 from collective.folderishtypes.interfaces import IFolderishType
 
@@ -35,7 +38,12 @@ class AddForm(base.NullAddForm):
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('listing_portlet.pt')
 
+    def __init__(self, *args):
+        base.Renderer.__init__(self, *args)
+        context = aq_inner(self.context)
+        portal_state = getMultiAdapter((context, self.request), name=u'plone_portal_state')
+        self.anonymous = portal_state.anonymous()
+
     @property
-    def show_me(self):
-        if IFolderishType.providedBy(self.context): return True
-        else: return False
+    def available(self):
+        return not self.anonymous and IFolderishType.providedBy(self.context)
