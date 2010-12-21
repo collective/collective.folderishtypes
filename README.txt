@@ -12,7 +12,8 @@ Folderish_* types.
 TODO
 ====
 
-- Internationalize it (viewlet's header)
+DONE - Internationalize it
+- Internationalize viewlet's header
 - Write tests
 - If needed: provide an alternative view for
   Products/CMFPlone/skins/plone_templates/events_listing
