@@ -1,0 +1,87 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# german translation of collective.folderishtypes.
+# johannes raggam <raggam-nl@adm.at>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0b1\n"
+"POT-Creation-Date: 2010-12-21 13:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: johannes raggam <raggam-nl@adm.at>\n"
+"Language-Team: deutsch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.folderishtypes\n"
+
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "A page in the site. Can contain rich text and behaves like a folder."
+msgstr "Eine Seite. Diese Seite hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#: ./browser/listing_portlet.py:32
+msgid "Add portlet for folderish types"
+msgstr "Portlet für Inhalt mit Ordnerverhalten hinzufügen."
+
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "An announcement that will show up on the news portlet and in the news listing with folderish behavior."
+msgstr "Eine Ankündigung, die in Nachrichtenübersichten aufgelistet wird. Diese Nachricht hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "Event with Folder"
+msgstr "Termin mit Ordnerverhalten"
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "External Edit"
+msgstr "Extern editieren"
+
+#: ./browser/listing_portlet.py:28
+msgid "Folderish Contenttype Listing Portlet"
+msgstr "Portlet für Inhalt mit Ordnerverhalten"
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "History"
+msgstr "Historie"
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "Information about an upcoming event, which can be displayed in the calendar. This Event has folderish behavior."
+msgstr "Termine können im Kalender angezeigt werden. Dieser Termin hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "News Item with Folder"
+msgstr "Nachricht mit Ordnerverhalten"
+
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "Page with Folder"
+msgstr "Seite mit Ordnerverhalten"
+
+#: ./browser/listing_portlet.py:33
+msgid "This portlet shows the contents of folderish types."
+msgstr "Dieses Portlet zeigt die Inhalte eines Inhaltstyps mit Ordnerverhalten an."
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "View"
+msgstr "Anzeigen"
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "iCalendar"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "vCalendar"
+msgstr ""
+

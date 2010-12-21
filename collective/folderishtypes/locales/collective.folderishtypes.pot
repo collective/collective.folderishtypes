@@ -1,0 +1,87 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2010-12-21 13:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.folderishtypes\n"
+
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "A page in the site. Can contain rich text and behaves like a folder."
+msgstr ""
+
+#: ./browser/listing_portlet.py:32
+msgid "Add portlet for folderish types"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "An announcement that will show up on the news portlet and in the news listing with folderish behavior."
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "Edit"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "Event with Folder"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "External Edit"
+msgstr ""
+
+#: ./browser/listing_portlet.py:28
+msgid "Folderish Contenttype Listing Portlet"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "History"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "Information about an upcoming event, which can be displayed in the calendar. This Event has folderish behavior."
+msgstr ""
+
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "News Item with Folder"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "Page with Folder"
+msgstr ""
+
+#: ./browser/listing_portlet.py:33
+msgid "This portlet shows the contents of folderish types."
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Document.xml
+#: ./profiles/default/types/Folderish_Event.xml
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "View"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "iCalendar"
+msgstr ""
+
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "vCalendar"
+msgstr ""
+
