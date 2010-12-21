@@ -8,7 +8,7 @@ __docformat__ = 'plaintext'
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+version = '1.0b1'
 
 setup(name='collective.folderishtypes',
       version=version,
