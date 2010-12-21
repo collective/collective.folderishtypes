@@ -5,7 +5,7 @@
 
  <property name="title" i18n:translate="">News Item with Folder</property>
  <property name="description" i18n:translate="">An announcement that will show up on the news portlet and in the news listing with folderish behavior.</property>
- <property name="content_icon">++resource++folderish_newsitem.png</property>
+ <!-- property name="content_icon">++resource++folderish_newsitem.png</property-->
 
  <property name="content_meta_type">Folderish News Item</property>
  <property name="product">collective.folderishtypes</property>
