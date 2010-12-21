@@ -8,18 +8,6 @@
         name="folderishtypes.css"
         file="folderishtypes.css"
         />
-    <browser:resource
-        name="folderish_document.png"
-        image="folderish_document.png"
-        />
-    <browser:resource
-        name="folderish_event.png"
-        image="folderish_event.png"
-        />
-    <browser:resource
-        name="folderish_newsitem.png"
-        image="folderish_newsitem.png"
-        />
 
     <browser:page
         for="Products.ATContentTypes.interfaces.folder.IATFolder"
