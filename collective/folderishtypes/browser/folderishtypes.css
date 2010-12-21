@@ -11,3 +11,10 @@
 .contenttype-folderish-news-item {
     background: url("contenttypes-sprite.png") no-repeat scroll 0 -1292px transparent;
 }
+.icons-on .contenttype-folderish-document,
+.icons-on .contenttype-folderish-event,
+.icons-on .contenttype-folderish-news-item {
+    display: inline-block;
+    line-height: 2em;
+    padding-left: 20px !important;
+}
