@@ -1,10 +1,8 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <object>
-
   <order manager="plone.belowcontent">
-      <viewlet
-        name="collective.folderishtypes.folderish_listing_viewlet"
-        insert-before="*" />
+    <viewlet
+      name="collective.folderishtypes.folderish_listing_viewlet"
+      insert-before="*" />
   </order>
-
 </object>
