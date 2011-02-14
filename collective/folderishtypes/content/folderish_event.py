@@ -20,13 +20,13 @@ from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-event_schema = event.ATEventSchema.copy()
+ct_schema = event.ATEventSchema.copy()
 
 class FolderishEvent(folder.ATFolder, event.ATEvent):
     implements(IFolderishEvent)
 
     portal_type = 'Folderish Event'
     _at_rename_after_creation = True
-    schema = event_schema + folder_schema
+    schema = ct_schema + folder_schema
 
 atapi.registerType(FolderishEvent, PROJECTNAME)

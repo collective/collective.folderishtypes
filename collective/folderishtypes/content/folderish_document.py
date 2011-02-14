@@ -20,13 +20,13 @@ from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-document_schema = document.ATDocumentSchema.copy()
+ct_schema = document.ATDocumentSchema.copy()
 
 class FolderishDocument(folder.ATFolder, document.ATDocument):
     implements(IFolderishDocument)
 
     portal_type = 'Folderish Document'
     _at_rename_after_creation = True
-    schema = document_schema + folder_schema
+    schema = ct_schema + folder_schema
 
 atapi.registerType(FolderishDocument, PROJECTNAME)
