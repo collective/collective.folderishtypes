@@ -20,7 +20,7 @@ from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-ct_schema = newsitem.ATNewsItemSchema .copy()
+ct_schema = newsitem.ATNewsItemSchema.copy()
 
 class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
     implements(IFolderishNewsItem)
