@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-# GNU General Public License (GPL)
-#
-__author__ = """Johannes Raggam <johannes@raggam.co.at>"""
-__docformat__ = 'plaintext'
-
 PROJECTNAME = "collective.folderishtypes"
 
 ADD_PERMISSIONS = {
@@ -21,5 +14,3 @@ def schema_cleanup(schema):
         if key in schema:
             del schema[key]
     return schema
-
-

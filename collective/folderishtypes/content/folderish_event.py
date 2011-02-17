@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-# GNU General Public License (GPL)
-#
-__author__ = """Johannes Raggam <johannes@raggam.co.at>"""
-__docformat__ = 'plaintext'
-
 from zope.interface import implements
 
 try:
@@ -20,13 +13,13 @@ from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-ct_schema = event.ATEventSchema.copy()
+type_schema = event.ATEventSchema.copy()
 
 class FolderishEvent(folder.ATFolder, event.ATEvent):
     implements(IFolderishEvent)
 
     portal_type = 'Folderish Event'
     _at_rename_after_creation = True
-    schema = ct_schema + folder_schema
+    schema = type_schema + folder_schema
 
 atapi.registerType(FolderishEvent, PROJECTNAME)
