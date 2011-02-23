@@ -2,13 +2,13 @@
     font-size:80%;
     line-height:1.5em;
 }
-.contenttype-folderish-document {
+.icons-on .contenttype-folderish-document {
     background: url("contenttypes-sprite.png") no-repeat scroll 0 4px transparent;
 }
-.contenttype-folderish-event {
+.icons-on .contenttype-folderish-event {
     background: url("contenttypes-sprite.png") no-repeat scroll 0 -212px transparent;
 }
-.contenttype-folderish-news-item {
+.icons-on .contenttype-folderish-news-item {
     background: url("contenttypes-sprite.png") no-repeat scroll 0 -1292px transparent;
 }
 .icons-on .contenttype-folderish-document,
