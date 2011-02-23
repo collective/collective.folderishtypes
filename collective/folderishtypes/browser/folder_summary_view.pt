@@ -8,76 +8,19 @@
 
 <body>
 
-<metal:content-core fill-slot="content-core">
-<metal:block define-macro="content-core"
-                tal:define="kssClassesView context/@@kss_field_decorator_view;
-                            getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                            templateId template/getId">
-
-    <div metal:define-macro="text-field-view"
-         id="parent-fieldname-text" class="stx"
-         tal:define="kss_class python:getKssClasses('text',
-                     templateId=templateId, macro='text-field-view');
-                     has_text exists:context/aq_base/getText;
-                     text python:has_text and here.getText() or ''"
-         tal:condition="text"
-         tal:attributes="class python:bool(context.Format() in
-                             ('text/structured', 'text/x-rst',)) and
-                             str('stx' + kss_class) or
-                             str('plain' + kss_class)">
-        <div metal:define-slot="inside" tal:replace="structure text">The body</div>
-    </div>
-
-    <metal:listingmacro define-macro="listing">
-    <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
-	                    contentFilter python:contentFilter and dict(contentFilter) or {};
-                        limit_display limit_display|request/limit_display|nothing;
-                        limit_display python:limit_display and int(limit_display) or None;
-                        more_url more_url|request/more_url|string:folder_contents;
-                        is_a_topic python:context.portal_type=='Topic';
-                        folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
-                        site_properties context/portal_properties/site_properties;
-                        use_view_action site_properties/typesUseViewActionInListings|python:();
-                        Batch python:modules['Products.CMFPlone'].Batch;
-                        b_start python:request.get('b_start', 0);
-                        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);
-                        isAnon context/@@plone_portal_state/anonymous;
-                        normalizeString nocall: context/plone_utils/normalizeString;
-                        toLocalizedTime nocall: context/@@plone/toLocalizedTime;
-                        show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
-                        navigation_root_url context/@@plone_portal_state/navigation_root_url;
-                        pas_member context/@@pas_member;
-                        calendar_types context/portal_calendar/calendar_types;">
-    <tal:listing condition="folderContents">
-
-        <tal:entries metal:define-slot="entries">
-            <tal:entry tal:repeat="item folderContents" metal:define-macro="entries">
-            <tal:block tal:define="item_url item/getURL|item/absolute_url;
-                                   item_id item/getId|item/id;
-                                   item_title_or_id item/pretty_title_or_id;
-                                   item_description item/Description;
-                                   item_type item/portal_type;
-                                   item_type_title item/Type;
-                                   item_modified item/ModificationDate;
-                                   item_created item/CreationDate;
-                                   item_icon python:plone_view.getIcon(item);
-                                   item_type_class python:'contenttype-' + normalizeString(item_type);
-                                   item_wf_state item/review_state|python: context.portal_workflow.getInfoFor(item, 'review_state', '');
-                                   item_wf_state_class python:'state-' + normalizeString(item_wf_state);
-                                   item_creator item/Creator;
-                                   item_start item/start/ISO|item/StartDate|nothing;
-                                   item_end item/end/ISO|item/EndDate|nothing;
-                                   item_view_url python:item_type in use_view_action and str(item_url+'/view') or item_url;
-                               ">
-                <metal:block define-slot="entry">
-
-
-                <div class="tileItem visualIEFloatFix vevent"
-                     tal:define="item_object item/getObject;"
-                     tal:attributes="class string:tileItem visualIEFloatFix vevent ${item_type_class}">
+    <metal:content-core fill-slot="content-core">
+        <metal:block use-macro="context/folder_listing/macros/content-core">
+            <!-- we don't want the dl -->
+            <metal:entries fill-slot="entries">
+                <metal:block use-macro="context/folder_listing/macros/entries">
+                    <metal:entry fill-slot="entry">
+                <div class="tileItem visualIEFloatFix"
+                     tal:define="item_object item/getObject;
+                                 item_view_url python:item_type in use_view_action and '%s/view' % item_url or item_url;
+                                 calendar_types context/portal_calendar/calendar_types">
 
                     <a href="#"
-                       tal:condition="exists:item_object/image_thumb"
+                       tal:condition="exists:nocall:item_object/tag"
                        tal:attributes="href item_view_url">
                         <img src="" alt=""
                              tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
@@ -98,7 +41,7 @@
                     <div class="documentByLine" tal:condition="python:site_properties.allowAnonymousViewAbout or not isAnon">
                     <tal:event condition="python:item_type in calendar_types">
                         <span tal:condition="item/location"
-                              i18n:translate="label_event_byline">
+                              i18n:translate="label_event_byline_with_location">
                             (<span tal:content="string:${item/location}"
                                    class="location"
                                    i18n:name="location">Oslo</span>, from
@@ -150,12 +93,8 @@
                     </tal:newsitem>
                     </div>
 
-                    <p class="tileBody">
-                        <span tal:omit-tag="" tal:condition="not:item_description">
-                            &nbsp;
-                        </span>
-                        <span class="description" tal:content="item_description"
-                              tal:condition="item_description">
+                    <p class="tileBody" tal:condition="item_description">
+                        <span class="description" tal:content="item_description">
                             description
                         </span>
                     </p>
@@ -171,34 +110,12 @@
                     <div class="visualClear"><!-- --></div>
 
                 </div>
-
-            </metal:block>
-            </tal:block>
-            </tal:entry>
-        </tal:entries>
-
-        <tal:comment tal:condition="nothing">
-          Batch navigation
-        </tal:comment>
-        <tal:block condition="python:not is_a_topic and not batch">
-            <div metal:use-macro="context/batch_macros/macros/navigation" />
-        </tal:block>
-
-    </tal:listing>
-    <metal:empty metal:define-slot="no_items_in_listing">
-        <p class="discreet"
-           tal:condition="not: folderContents"
-           i18n:translate="description_no_items_in_folder">
-            There are currently no items in this folder.
-        </p>
-    </metal:empty>
-
-    </tal:foldercontents>
-    </metal:listingmacro>
-
-</metal:block>
-</metal:content-core>
-
+                    </metal:entry>
+                </metal:block>
+            </metal:entries>
+        </metal:block>
+    </metal:content-core>
 
 </body>
 </html>
+
