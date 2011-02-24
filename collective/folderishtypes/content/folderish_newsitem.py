@@ -7,19 +7,23 @@ except ImportError:
     from Products.Archetypes import atapi
 from Products.ATContentTypes.content import newsitem
 from Products.ATContentTypes.content import folder
+from Products.ATContentTypes.content import schemata
 
 from collective.folderishtypes.interfaces import IFolderishNewsItem
 from collective.folderishtypes.config import PROJECTNAME
 from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
-type_schema = newsitem.ATNewsItemSchema.copy()
+type_schema = folder_schema + newsitem.ATNewsItemSchema.copy()
+schemata.finalizeATCTSchema(type_schema,
+                            folderish=True,
+                            moveDiscussion=False)
 
 class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
     implements(IFolderishNewsItem)
 
     portal_type = 'Folderish News Item'
     _at_rename_after_creation = True
-    schema = type_schema + folder_schema
+    schema = type_schema
 
 atapi.registerType(FolderishNewsItem, PROJECTNAME)
