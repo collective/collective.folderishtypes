@@ -45,7 +45,7 @@
                         show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
                         navigation_root_url context/@@plone_portal_state/navigation_root_url;
                         pas_member context/@@pas_member;
-                        calendar_types context/portal_calendar/calendar_types;">
+                        calendar_types context/portal_calendar/calendar_types">
     <tal:listing condition="batch">
 
         <dl metal:define-slot="entries">
