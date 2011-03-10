@@ -26,6 +26,8 @@ http://limi.net/articles/18-things-i-wish-were-true-about-plone/
 TODO
 ====
 
+- Depend on z3c.jbot, so that overriding folder_listing and folder_summary_view
+  might also work at IPloneSite root.
 - Write tests
 - The folderish content viewlet seems to be shown regardless if it was
   registered via Generic Setup. Fix that.
