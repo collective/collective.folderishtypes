@@ -5,6 +5,9 @@ Provides the types "Folderish Event", "Folderish News Item" and
 "Folderish Document" as replacements for their ATContentTypes equivalents.
 Those types are able to hold any other content, like a Folder.
 
+There is a "listing_viewlet" and "portlet" profile, which show the contents of
+the folderish types in a viewlet or portlet respectively.
+
 You can limit the types, which can be added to FolderishTypes by providing
 a Generic Setup import type configuration.
 
@@ -26,6 +29,8 @@ TODO
 - Write tests
 - The folderish content viewlet seems to be shown regardless if it was
   registered via Generic Setup. Fix that.
+- Check, if folderish types implement all interfaces from the types they derive
+  from. if not, implement them also.
 
 Tested with
 ===========
@@ -36,4 +41,4 @@ Plone 4
 Author
 ======
 
-Johannes Raggam <johannes@raggam.co.at>
+Johannes Raggam <johannes@raggam.co.at>, BlueDynamics Alliance
