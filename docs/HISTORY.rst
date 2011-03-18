@@ -3,7 +3,8 @@ Changelog
 
 1.0b3 (unreleased)
 ------------------
-
+- Add rolemap.xml for generic setup to have proper configured permissions.
+  [thet]
 
 1.0b2 (2011-03-10)
 ------------------
