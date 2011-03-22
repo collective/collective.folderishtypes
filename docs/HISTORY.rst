@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0b4 (unreleased)
+------------------
+
+
 1.0b3 (2011-03-22)
 ------------------
 - Add rolemap.xml for generic setup to have proper configured permissions.
