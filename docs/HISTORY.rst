@@ -3,7 +3,9 @@ Changelog
 
 1.0b4 (unreleased)
 ------------------
-
+- Fixed traversing to image scales for FolderishNewsItem. Subclasses should
+  implement __bobo_traverse__ too.
+  [thet]
 
 1.0b3 (2011-03-22)
 ------------------
