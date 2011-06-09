@@ -31,8 +31,6 @@ TODO
 - Write tests
 - The folderish content viewlet seems to be shown regardless if it was
   registered via Generic Setup. Fix that.
-- Check, if folderish types implement all interfaces from the types they derive
-  from. if not, implement them also.
 
 Tested with
 ===========

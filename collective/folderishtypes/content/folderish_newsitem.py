@@ -15,6 +15,7 @@ from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
 type_schema = folder_schema + newsitem.ATNewsItemSchema.copy()
+type_schema['image'].sizes = None # needed for plone.app.imaging
 schemata.finalizeATCTSchema(type_schema,
                             folderish=True,
                             moveDiscussion=False)
