@@ -4,6 +4,10 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- More explicit content-icons background styles which don't override
+  background-color.
+  [thet]
+
 - Use plone.app.imaging scales - apply a schema patch to FolderishNewsItem.
   [thet]
 
