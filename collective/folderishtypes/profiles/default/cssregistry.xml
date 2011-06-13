@@ -2,7 +2,7 @@
 <object name="portal_css">
  <stylesheet title=""
     id="++resource++folderishtypes.css"
-    media="screen" rel="stylesheet" rendering="import"
+    media="screen" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression="" />
 </object>

@@ -4,6 +4,10 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Include CSS via link instead of import, which can then be better processed by
+  XML manipulation tools like Deliverance or Diazo.
+  [thet]
+
 - More explicit content-icons background styles which don't override
   background-color.
   [thet]
