@@ -5,8 +5,8 @@ Provides the types "Folderish Event", "Folderish News Item" and
 "Folderish Document" as replacements for their ATContentTypes equivalents.
 Those types are able to hold any other content, like a Folder.
 
-There is a "listing_viewlet" and "portlet" profile, which show the contents of
-the folderish types in a viewlet or portlet respectively.
+There is a "portlet" profile, which installs a portlet to show the contents of
+an folderish type.
 
 You can limit the types, which can be added to FolderishTypes by providing
 a Generic Setup import type configuration.
@@ -29,8 +29,8 @@ TODO
 - Depend on z3c.jbot, so that overriding folder_listing and folder_summary_view
   might also work at IPloneSite root.
 - Write tests
-- The folderish content viewlet seems to be shown regardless if it was
-  registered via Generic Setup. Fix that.
+- if appropriate: remove portlet and recomment the use of 
+  https://svn.plone.org/svn/collective/collective.portlet.localcontents/
 
 Tested with
 ===========

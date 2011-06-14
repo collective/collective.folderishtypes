@@ -4,6 +4,10 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Remove folderish_listing_viewlet, since there is already a portlet which can
+  be used.
+  [thet]
+
 - Include CSS via link instead of import, which can then be better processed by
   XML manipulation tools like Deliverance or Diazo.
   [thet]

@@ -6,26 +6,17 @@
     i18n_domain="collective.folderishtypes">
 
     <i18n:registerTranslations directory="locales" />
-
     <five:registerPackage package="." initialize=".initialize" />
 
+    <include package="plone.app.portlets" />
     <include package=".browser" />
-
+    
     <genericsetup:registerProfile
         name="default"
         title="collective.folderishtypes: default"
         directory="profiles/default"
         description="collective.folderishtypes default profile: Installs
                      the folderish content types in Plone."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
-    <genericsetup:registerProfile
-        name="listing_viewlet"
-        title="collective.folderishtypes: add a folder listing viewlet to
-               folderishtypes"
-        directory="profiles/listing_viewlet"
-        description="collective.folderishtypes listing_viewlet profile: Adds a
-                     folder listing viewlet to folderish types."
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
     <genericsetup:registerProfile

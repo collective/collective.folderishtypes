@@ -1,90 +1,61 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-	xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.folderishtypes">
 
-	<browser:resource
-        name="folderishtypes.css"
-        file="folderishtypes.css"
-        />
+  <browser:resource
+      name="folderishtypes.css"
+      file="folderishtypes.css"
+      />
 
-    <browser:page
-        for="Products.ATContentTypes.interfaces.folder.IATFolder"
-        name="folder_listing"
-        template="folder_listing.pt"
-        permission="zope2.View"
-        />
-	<browser:page
-        for="Products.ATContentTypes.interfaces.topic.IATTopic"
-        name="folder_listing"
-        template="folder_listing.pt"
-		permission="zope2.View"
-	/>
-    <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
-    <browser:page
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="folder_listing"
-        template="folder_listing.pt"
-        permission="zope2.View"
-        />
+  <browser:page
+      for="Products.ATContentTypes.interfaces.folder.IATFolder"
+      name="folder_listing"
+      template="folder_listing.pt"
+      permission="zope2.View"
+      />
+  <browser:page
+      for="Products.ATContentTypes.interfaces.topic.IATTopic"
+      name="folder_listing"
+      template="folder_listing.pt"
+      permission="zope2.View"
+      />
 
-    <browser:page
-        for="Products.ATContentTypes.interfaces.folder.IATFolder"
-        name="folder_summary_view"
-        template="folder_summary_view.pt"
-        permission="zope2.View"
-        />
-    <browser:page
-        for="Products.ATContentTypes.interfaces.topic.IATTopic"
-        name="folder_summary_view"
-        template="folder_summary_view.pt"
-        permission="zope2.View"
-        />
-    <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
-    <browser:page
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="folder_summary_view"
-        template="folder_summary_view.pt"
-        permission="zope2.View"
-        />
+  <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="folder_listing"
+      template="folder_listing.pt"
+      permission="zope2.View"
+      />
 
-	<!-- viewlet for listings in folderish types -->
-	<browser:viewlet
-		for="..interfaces.IFolderishDocument"
-        name="collective.folderishtypes.folderish_listing_viewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class="plone.app.layout.viewlets.common.ViewletBase"
-        permission="cmf.ModifyPortalContent"
-		template="folderish_listing_viewlet.pt"
-        />
-	<browser:viewlet
-		for="..interfaces.IFolderishEvent"
-		name="collective.folderishtypes.folderish_listing_viewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class="plone.app.layout.viewlets.common.ViewletBase"
-        permission="cmf.ModifyPortalContent"
-		template="folderish_listing_viewlet.pt"
-        />
-	<browser:viewlet
-		for="..interfaces.IFolderishNewsItem"
-		name="collective.folderishtypes.folderish_listing_viewlet"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class="plone.app.layout.viewlets.common.ViewletBase"
-        permission="cmf.ModifyPortalContent"
-		template="folderish_listing_viewlet.pt"
-        />
+  <browser:page
+      for="Products.ATContentTypes.interfaces.folder.IATFolder"
+      name="folder_summary_view"
+      template="folder_summary_view.pt"
+      permission="zope2.View"
+      />
+  <browser:page
+      for="Products.ATContentTypes.interfaces.topic.IATTopic"
+      name="folder_summary_view"
+      template="folder_summary_view.pt"
+      permission="zope2.View"
+      />
+  <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="folder_summary_view"
+      template="folder_summary_view.pt"
+      permission="zope2.View"
+      />
 
-    <plone:portlet
-        name="collective.folderishtypes.listing"
-        interface=".listing_portlet.IListingPortlet"
-        assignment=".listing_portlet.Assignment"
-        renderer=".listing_portlet.Renderer"
-        addview=".listing_portlet.AddForm"
-        view_permission="cmf.ModifyPortalContent"
-        edit_permission="cmf.ModifyPortalContent"
-        /><!-- view_permission, edit_permission: we don't have any effect except
-               if you remove us, we will break existing installs. we love you.
-			   -->
+  <plone:portlet
+      name="collective.folderishtypes.listing"
+      interface=".listing_portlet.IListingPortlet"
+      assignment=".listing_portlet.Assignment"
+      renderer=".listing_portlet.Renderer"
+      addview=".listing_portlet.AddForm"
+      />
 
 </configure>
