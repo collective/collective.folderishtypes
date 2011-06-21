@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<repositorytool>
+ <policymap purge="false">
+  <type name="Folderish Document">
+   <policy name="at_edit_autoversion"/>
+   <policy name="version_on_revert"/>
+  </type>
+  <type name="Folderish Event">
+   <policy name="at_edit_autoversion"/>
+   <policy name="version_on_revert"/>
+  </type>
+  <type name="Folderish News Item">
+   <policy name="at_edit_autoversion"/>
+   <policy name="version_on_revert"/>
+  </type>
+ </policymap>
+</repositorytool>

@@ -4,6 +4,12 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Add types to image_types in portal_atct to allow image scale recreation.
+  [thet]
+
+- Add HistroyAwareMixin and configure types to be versionable.
+  [thet]
+
 - Remove folderish_listing_viewlet, since there is already a portlet which can
   be used.
   [thet]

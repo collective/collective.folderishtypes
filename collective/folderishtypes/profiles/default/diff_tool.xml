@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object>
+ <difftypes>
+  <type portal_type="Folderish Document">
+   <field name="any" difftype="Compound Diff for AT types"/>
+  </type>
+  <type portal_type="Folderish Event">
+   <field name="any" difftype="Compound Diff for AT types"/>
+  </type>
+  <type portal_type="Folderish News Item">
+   <field name="any" difftype="Compound Diff for AT types"/>
+  </type>
+ </difftypes>
+</object>
