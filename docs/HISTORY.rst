@@ -4,6 +4,9 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
+- Locales Update.
+  [thet]
+
 - Add types to image_types in portal_atct to allow image scale recreation.
   [thet]
 

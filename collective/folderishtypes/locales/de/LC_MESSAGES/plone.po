@@ -1,0 +1,47 @@
+# Johannes Raggam <raggam-nl@adm.at>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.folderishtypes\n"
+"POT-Creation-Date: 2011-07-05 15:32+0000\n"
+"PO-Revision-Date: 2011-07-05 15:32+0000\n"
+"Last-Translator: Johannes Raggam <raggam-nl@adm.at>\n"
+"Language-Team: deutsch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: de\n"
+"Language-Name: Deutsch\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+
+#. Default: "A page in the site. Can contain rich text and behaves like a folder."
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "folderish_document_desc"
+msgstr "Eine Seite. Diese Seite hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#. Default: "Page with Folder"
+#: ./profiles/default/types/Folderish_Document.xml
+msgid "folderish_document_title"
+msgstr "Seite mit Ordnerverhalten"
+
+#. Default: "Information about an upcoming event, which can be displayed in the calendar. This Event has folderish behavior."
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "folderish_event_desc"
+msgstr "Termine können im Kalender angezeigt werden. Dieser Termin hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#. Default: "Event"
+#: ./profiles/default/types/Folderish_Event.xml
+msgid "folderish_event_title"
+msgstr "Termin"
+
+#. Default: "An announcement that will show up on the news portlet and in the news listing with folderish behavior."
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "folderish_news_item_desc"
+msgstr "Eine Ankündigung, die in Nachrichtenübersichten aufgelistet wird. Diese Nachricht hat ein Ordnerverhalten und kann andere Objekte beinhalten."
+
+#. Default: "News Item with Folder"
+#: ./profiles/default/types/Folderish_News_Item.xml
+msgid "folderish_news_item_title"
+msgstr "Nachricht"

@@ -18,12 +18,12 @@ class Assignment(base.Assignment):
 
     @property
     def title(self):
-        return _(u"Folderish Contenttype Listing Portlet")
+        return _(u"listingportlet_title", u"Folderish Contenttype Listing Portlet")
 
 class AddForm(base.NullAddForm):
     form_fields = form.Fields(IListingPortlet)
-    label = _(u"Add portlet for folderish types")
-    description = _(u"This portlet shows the contents of folderish types.")
+    label = _(u"listingportlet_label_add", u"Add portlet for folderish types")
+    description = _(u"listingportlet_help_add", u"This portlet shows the contents of folderish types.")
 
     def create(self):
         return Assignment()
