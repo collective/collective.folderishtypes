@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0b5 (2011-09-07)
+------------------
+
+- Updated documentation: Missing viewlet issue.
+  [thet]
+
 1.0b4 (2011-09-07)
 ------------------
 
