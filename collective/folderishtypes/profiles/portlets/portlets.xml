@@ -16,6 +16,32 @@
   <assignment name="contextual_contents"
       type="collective.folderishtypes.contextual_contents"
       category="content_type"
+      key="Folderish Event"
+      manager="plone.rightcolumn"
+      visible="True">
+    <property name="name">Contextual Contents</property>
+    <property name="allowed_types">
+      <element>Image</element>
+      <element>File</element>
+      <element>Link</element>
+    </property>
+  </assignment>
+  <assignment name="contextual_contents"
+      type="collective.folderishtypes.contextual_contents"
+      category="content_type"
+      key="Folderish Document"
+      manager="plone.rightcolumn"
+      visible="True">
+    <property name="name">Contextual Contents</property>
+    <property name="allowed_types">
+      <element>Image</element>
+      <element>File</element>
+      <element>Link</element>
+    </property>
+  </assignment>
+  <assignment name="contextual_contents"
+      type="collective.folderishtypes.contextual_contents"
+      category="content_type"
       key="Folderish News Item"
       manager="plone.rightcolumn"
       visible="True">
