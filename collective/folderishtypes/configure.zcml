@@ -20,11 +20,11 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
     <genericsetup:registerProfile
-        name="portlet"
-        title="collective.folderishtypes: portlet for listing contents"
-        directory="profiles/portlet"
-        description="collective.folderishtypes portlet profile: Adds a
-                     folder listing portlet to folderish types."
+        name="portlets"
+        title="collective.folderishtypes: Example portlets for folderish types"
+        directory="profiles/portlets"
+        description="collective.folderishtypes portlet profile: Adds example
+                     portlets for Folderish Types."
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
