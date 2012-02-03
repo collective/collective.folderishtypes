@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1 (2012-02-04)
+----------------
+
+- Add a contextual contents portlets, which shows the contents of folderish
+  types in a portlet.
+  [thet]
+
 1.0 (2012-02-02)
 ----------------
 
