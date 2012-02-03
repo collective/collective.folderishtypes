@@ -57,5 +57,13 @@
       renderer=".listing_portlet.Renderer"
       addview=".listing_portlet.AddForm"
       />
+  <plone:portlet
+      name="collective.folderishtypes.contextual_contents"
+      interface=".portlet_contextual_contents.IContextualContentsPortlet"
+      assignment=".portlet_contextual_contents.Assignment"
+      renderer=".portlet_contextual_contents.Renderer"
+      addview=".portlet_contextual_contents.AddForm"
+      />
+
 
 </configure>

@@ -3,12 +3,6 @@
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   i18n:domain="plone">
 
-  <!-- ADD -->
-  <portlet
-    addview="collective.folderishtypes.listing"
-    title="Folderish Contenttype Listing Portlet"
-    description="Add portlet for folderish types."
-    />
   <assignment name="folderishtypes-listing"
       key="Folderish Document" category="content_type" visible="True"
       manager="plone.leftcolumn" type="collective.folderishtypes.listing"/>
@@ -19,4 +13,18 @@
       key="Folderish News Item" category="content_type" visible="True"
       manager="plone.leftcolumn" type="collective.folderishtypes.listing"/>
 
+  <assignment name="contextual_contents"
+      type="collective.folderishtypes.contextual_contents"
+      category="content_type"
+      key="Folderish News Item"
+      manager="plone.rightcolumn"
+      visible="True">
+    <property name="name">Contextual Contents</property>
+    <property name="allowed_types">
+      <element>Image</element>
+      <element>File</element>
+      <element>Link</element>
+    </property>
+  </assignment>
+  
 </portlets>

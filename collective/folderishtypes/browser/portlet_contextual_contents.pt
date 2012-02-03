@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="thet.netpol.base"
+      tal:omit-tag="">
+
+  <dl class="portlet portletContextContents"
+      tal:define="items view/items"
+      tal:condition="items">
+
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span tal:content="view/data/name" />
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+      <ul>
+      <tal:rep repeat="item items">
+        <li>
+        <tal:link condition="item/getRemoteUrl">
+          <a href="" tal:attributes="href item/getRemoteUrl" tal:content="item/Title">title</a>
+        </tal:link>
+        <tal:nolink condition="not:item/getRemoteUrl">
+          <a href="" tal:attributes="href item/getURL" tal:content="item/Title">title</a>
+        </tal:nolink>
+        </li>
+      </tal:rep>
+      </ul>
+    </dd>
+
+  </dl>
+
+</html>
