@@ -19,7 +19,7 @@ DEFAULT_ALLOWED_TYPES = (
     'Image',
 )
 
-class IContextualContents(IPortletDataProvider):
+class IContextualContentsPortlet(IPortletDataProvider):
 
     name = schema.TextLine(
             title=_(u"ctxcontents_label_title", default=u"Title"),
