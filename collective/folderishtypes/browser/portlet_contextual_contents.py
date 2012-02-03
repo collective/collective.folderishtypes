@@ -60,7 +60,7 @@ class Renderer(base.Renderer):
         return brains
 
 class Assignment(base.Assignment):
-    implements(IContextualContents)
+    implements(IContextualContentsPortlet)
 
     def __init__(self, name = u"Contextual Contents",
             allowed_types=DEFAULT_ALLOWED_TYPES):
@@ -72,7 +72,7 @@ class Assignment(base.Assignment):
         return _(u'portlet_ctxcontents_title', default=u"Contextual Contents Portlet")
 
 class AddForm(base.AddForm):
-    form_fields = form.Fields(IContextualContents)
+    form_fields = form.Fields(IContextualContentsPortlet)
     label = _(u'portlet_ctxcontents_label_add', default=u"Add Contextual Contents Portlet.")
     description = _(u'portlet_ctxcontents_help_add', default=u"This portlet shows items of a specific Type which are in the current folder.")
 
@@ -80,6 +80,6 @@ class AddForm(base.AddForm):
         return Assignment(**data)
 
 class EditForm(base.EditForm):
-    form_fields = form.Fields(IContextualContents)
+    form_fields = form.Fields(IContextualContentsPortlet)
     label = _(u'portlet_ctxcontents_label_edit', default=u"Edit Contextual Contents Portlet.")
     description = _(u'portlet_ctxcontents_help_edit', default=u"This portlet shows items of a specific Type which are in the current folder.")
