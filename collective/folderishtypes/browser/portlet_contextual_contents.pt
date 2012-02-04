@@ -14,27 +14,41 @@
         <span class="portletTopRight"></span>
     </dt>
 
-    <dd class="portletItem">
-      <ul>
-      <tal:rep repeat="item items">
-        <li>
-        <tal:link condition="item/getRemoteUrl|nothing">
-          <a href=""
-              tal:attributes="href item/getRemoteUrl;
-                              title item/Description"
-              tal:content="item/Title">title</a>
-        </tal:link>
-        <tal:nolink condition="not:item/getRemoteUrl">
-          <a href=""
-              tal:attributes="href item/getURL;
-                              title item/Description"
-              tal:content="item/Title">title</a>
-        </tal:nolink>
-        </li>
-      </tal:rep>
-      </ul>
-    </dd>
+    <tal:item repeat="item items">
+    <dd class="portletItem"
+        tal:define="oddrow repeat/item/odd"
+        tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+      <tal:def define="is_image python:item.portal_type=='Image';
+                       is_link python:item.portal_type=='Link';
+                       display_images view/data/display_images;
+                       scale view/data/image_scale">
 
+        <tal:img condition="python:is_image and display_images"
+                 define="obj item/getObject">
+          <a href=""
+             tal:attributes="href item/getURL;
+                             title item/Title"><img src="" alt=""
+             tal:replace="structure python:path('nocall:obj/tag')(scale=scale, title=item.Title, alt=item.Title)" /></a>
+          <p class="discreet" tal:condition="item/Description" tal:content="item/Description"/>
+        </tal:img>
+
+        <tal:noimg condition="python:not (is_image and display_images)">
+          <tal:link condition="is_link">
+            <a href=""
+                tal:attributes="href item/getRemoteUrl;
+                                title item/Description"
+                tal:content="item/Title">title</a>
+          </tal:link>
+          <tal:nolink condition="not:is_link">
+            <a href=""
+                tal:attributes="href item/getURL;
+                                title item/Description"
+                tal:content="item/Title">title</a>
+          </tal:nolink>
+        </tal:noimg>
+      </tal:def>
+    </dd>
+    </tal:item>
   </dl>
 
 </html>
