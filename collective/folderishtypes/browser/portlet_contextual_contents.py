@@ -40,6 +40,23 @@ class IContextualContentsPortlet(IPortletDataProvider):
         )
     )
 
+    display_images = schema.Bool(
+        title=_(u"ctxcontents_label_display_images", u"Display Images"),
+        description=_(u"ctxcontents_help_display_images", u"Display images inline."),
+        default=False,
+        required=False,
+    )
+
+    image_scale = schema.Choice(
+        title=_(u'ctxcontents_label_image_scale', default=u'Image Scale'),
+        description=_(u'ctxcontents_help_image_scale',
+                      default=u'Select, which image scale should be used '
+                              u'for the portlet.'),
+        required=False,
+        default=None,
+        vocabulary="collective.folderishtypes.ImageScaleVocabulary",
+    )
+
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('portlet_contextual_contents.pt')
 
@@ -65,9 +82,13 @@ class Assignment(base.Assignment):
     implements(IContextualContentsPortlet)
 
     def __init__(self, name = u"Contextual Contents",
-            allowed_types=DEFAULT_ALLOWED_TYPES):
+            allowed_types=DEFAULT_ALLOWED_TYPES,
+            display_images=False,
+            image_scale=None):
         self.name = name
         self.allowed_types = allowed_types
+        self.display_images = display_images
+        self.image_scale = image_scale
 
     @property
     def title(self):

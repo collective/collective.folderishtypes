@@ -10,6 +10,11 @@
 
     <include package="plone.app.portlets" />
     <include package=".browser" />
+
+    <utility
+        component=".vocabularies.ImageScaleVocabulary"
+        name="collective.folderishtypes.ImageScaleVocabulary"
+    />
     
     <genericsetup:registerProfile
         name="default"
