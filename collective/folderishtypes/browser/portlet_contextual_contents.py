@@ -1,7 +1,5 @@
 from Acquisition import aq_inner, aq_parent
-from plone.app.portlets.cache import get_language
 from plone.app.portlets.portlets import base
-from plone.memoize import ram
 from plone.portlets.interfaces import IPortletDataProvider
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.interfaces import ISiteRoot
@@ -21,30 +19,6 @@ DEFAULT_ALLOWED_TYPES = (
     'Link',
     'Image',
 )
-
-def render_cachekey(fun, self):
-    """
-    Based on render_cachekey from plone.app.portlets.cache, without the
-    fingerprint based on the portlet's catalog brains.
-
-    Generates a key based on:
-
-    * Portal URL
-    * Negotiated language
-    * Anonymous user flag
-    * Portlet manager
-    * Assignment
-
-    """
-    context = aq_inner(self.context)
-    anonymous = getToolByName(context, 'portal_membership').isAnonymousUser()
-
-    return "".join((
-        getToolByName(aq_inner(self.context), 'portal_url')(),
-        get_language(aq_inner(self.context), self.request),
-        str(anonymous),
-        self.manager.__name__,
-        self.data.__name__))
 
 
 class IContextualContentsPortlet(IPortletDataProvider):
@@ -69,7 +43,7 @@ class IContextualContentsPortlet(IPortletDataProvider):
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('portlet_contextual_contents.pt')
 
-    @ram.cache(render_cachekey) # cached per request
+    @property
     def items(self):
         context = aq_inner(self.context)
         if not ISiteRoot.providedBy(context):
@@ -86,12 +60,6 @@ class Renderer(base.Renderer):
         query['path']['depth'] = 1
         brains = cat(**query)
         return brains
-
-    @property
-    def available(self):
-        if self.items():
-            return True
-        return False
 
 class Assignment(base.Assignment):
     implements(IContextualContentsPortlet)

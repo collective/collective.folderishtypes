@@ -4,7 +4,9 @@
       i18n:domain="thet.netpol.base"
       tal:omit-tag="">
 
-  <dl class="portlet portletContextContents" tal:define="items view/items">
+    <dl class="portlet portletContextualContents"
+        tal:define="items view/items"
+        tal:condition="items|nothing">
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
@@ -16,11 +18,17 @@
       <ul>
       <tal:rep repeat="item items">
         <li>
-        <tal:link condition="item/getRemoteUrl">
-          <a href="" tal:attributes="href item/getRemoteUrl" tal:content="item/Title">title</a>
+        <tal:link condition="item/getRemoteUrl|nothing">
+          <a href=""
+              tal:attributes="href item/getRemoteUrl;
+                              title item/Description"
+              tal:content="item/Title">title</a>
         </tal:link>
         <tal:nolink condition="not:item/getRemoteUrl">
-          <a href="" tal:attributes="href item/getURL" tal:content="item/Title">title</a>
+          <a href=""
+              tal:attributes="href item/getURL;
+                              title item/Description"
+              tal:content="item/Title">title</a>
         </tal:nolink>
         </li>
       </tal:rep>
