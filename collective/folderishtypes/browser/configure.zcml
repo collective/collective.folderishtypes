@@ -63,6 +63,7 @@
       assignment=".portlet_contextual_contents.Assignment"
       renderer=".portlet_contextual_contents.Renderer"
       addview=".portlet_contextual_contents.AddForm"
+      editview=".portlet_contextual_contents.EditForm"
       />
 
 
