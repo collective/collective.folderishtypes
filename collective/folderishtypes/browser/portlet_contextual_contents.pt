@@ -4,10 +4,7 @@
       i18n:domain="thet.netpol.base"
       tal:omit-tag="">
 
-  <dl class="portlet portletContextContents"
-      tal:define="items view/items"
-      tal:condition="items">
-
+  <dl class="portlet portletContextContents" tal:define="items view/items">
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
