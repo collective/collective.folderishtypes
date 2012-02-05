@@ -5,6 +5,7 @@
       tal:omit-tag="">
 
     <dl class="portlet portletContextualContents"
+        tal:attributes="class string:portlet portletContextualContents portletContextualContents-${view/data/name}"
         tal:define="items view/items"
         tal:condition="items|nothing">
 

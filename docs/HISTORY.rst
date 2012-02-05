@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1.1 (2012-02-05)
+------------------
+
+- Add a custom style class for the contextual contents portlet based on the
+  portlet's name.
+  [thet]
+
 1.1 (2012-02-04)
 ----------------
 
