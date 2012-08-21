@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1.2 (unreleased)
+------------------
+
+- For Folderish Event, use plone.app.event's ATEvent implementation if
+  available.
+  [thet]
+
 1.1.1 (2012-02-05)
 ------------------
 

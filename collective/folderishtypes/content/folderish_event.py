@@ -5,7 +5,11 @@ try:
 except ImportError:
     # No multilingual support
     from Products.Archetypes import atapi
-from Products.ATContentTypes.content import event
+
+try:
+    from plone.app.event.at import content as event
+except ImportError:
+    from Products.ATContentTypes.content import event
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
