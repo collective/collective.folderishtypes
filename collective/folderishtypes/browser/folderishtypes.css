@@ -1,24 +1,29 @@
 .folderishtypes-folderlisting {
     font-size:80%;
-    line-height:1.5em; }
+    line-height:1.5em;
+}
 .icons-on .contenttype-folderish-document {
     background-image:url("contenttypes-sprite.png");
     background-repeat:no-repeat;
     background-attachment:scroll;
-    background-position:0 4px; }
+    background-position:0 4px;
+}
 .icons-on .contenttype-folderish-event {
     background: url("contenttypes-sprite.png");
     background-repeat:no-repeat;
     background-attachment:scroll;
-    background-position:0 -212px; }
+    background-position:0 -212px;
+}
 .icons-on .contenttype-folderish-news-item {
     background: url("contenttypes-sprite.png");
     background-repeat:no-repeat;
     background-attachment:scroll;
-    background-position:0 -1292px; }
+    background-position:0 -1292px;
+}
 .icons-on .contenttype-folderish-document,
 .icons-on .contenttype-folderish-event,
 .icons-on .contenttype-folderish-news-item {
     display: inline-block;
     line-height: 2em;
-    padding-left: 20px !important; }
+    padding-left: 20px;
+}
