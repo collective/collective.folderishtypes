@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.2 (unreleased)
-------------------
+1.1.2dev
+--------
 
 - For Folderish Event, use plone.app.event's ATEvent implementation if
   available.
