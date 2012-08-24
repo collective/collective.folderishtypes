@@ -6,7 +6,7 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes import atapi
 from Products.ATContentTypes.content import newsitem
-from Products.ATContentTypes.content import folder
+from plone.app.folder import folder
 from Products.ATContentTypes.content import schemata
 
 from collective.folderishtypes.interfaces import IFolderishNewsItem
@@ -17,7 +17,6 @@ folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
 type_schema = folder_schema + newsitem.ATNewsItemSchema.copy()
 type_schema['image'].sizes = None # needed for plone.app.imaging
 schemata.finalizeATCTSchema(type_schema,
-                            folderish=True,
                             moveDiscussion=False)
 
 class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
