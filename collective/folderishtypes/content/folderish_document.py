@@ -15,7 +15,6 @@ from collective.folderishtypes.config import schema_cleanup
 
 folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
 type_schema = folder_schema + document.ATDocumentSchema.copy()
-import pdb; pdb.set_trace()
 schemata.finalizeATCTSchema(type_schema,
                             moveDiscussion=False)
 
