@@ -1,8 +1,15 @@
 Changelog
 =========
 
-1.1.2dev
---------
+1.2 (2012-09-04)
+----------------
+
+- Removed folderish=True when finalizing the schema, which prevented
+  relateditems from being displayed. Updated import to plone.app.folder.
+  [agitator]
+
+- Fix meta types in FTI to follow consistent conventions.
+  [rnixx]
 
 - For Folderish Event, use plone.app.event's ATEvent implementation if
   available.
