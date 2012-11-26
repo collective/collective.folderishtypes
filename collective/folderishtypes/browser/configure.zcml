@@ -2,11 +2,22 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.folderishtypes">
 
   <browser:resource
       name="folderishtypes.css"
       file="folderishtypes.css"
+      />
+
+  <!-- enable plone.app.discussion for IFolderishTypes -->
+  <browser:page
+      zcml:condition="installed plone.app.discussion"
+      name="conversation_view"
+      for="collective.folderishtypes.interfaces.IFolderishType"
+      layer="plone.app.discussion.interfaces.IDiscussionLayer"
+      class=".adapters.FolderishTypesConversationView"
+      permission="zope2.View"
       />
 
   <browser:page

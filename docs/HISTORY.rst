@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.3 (2012-11-26)
+----------------
+
+- Allow discussions from plone.app.discussion on Folderish Types.
+  [thet]
+
 1.2.1 (2012-09-06)
 ------------------
 
