@@ -8,7 +8,7 @@ Changelog
   easily kept apart from the folderish ones.
   [thet]
 
-- For folderish Events, move the location field back to the main schemata.
+- For folderish events, move the location field back to the main schemata.
   [thet]
 
 1.3 (2012-11-26)
