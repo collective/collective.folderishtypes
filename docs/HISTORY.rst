@@ -1,8 +1,12 @@
 Changelog
 =========
 
-1.4 (unreleased)
+1.4 (2012-11-28)
 ----------------
+
+- Give the original, non-folderish types another title, so that they can be
+  easily kept apart from the folderish ones.
+  [thet]
 
 - For folderish Events, move the location field back to the main schemata.
   [thet]
