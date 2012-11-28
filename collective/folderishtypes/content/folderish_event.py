@@ -21,6 +21,9 @@ folder_schema = schema_cleanup(folder.ATFolderSchema.copy())
 type_schema = folder_schema + event.ATEventSchema.copy()
 schemata.finalizeATCTSchema(type_schema,
                             moveDiscussion=False)
+type_schema.changeSchemataForField('location', 'default')
+type_schema.moveField('location', before='attendees') # Move location back to
+                                                      # main schemata
 
 class FolderishEvent(folder.ATFolder, event.ATEvent):
     implements(IFolderishEvent)
