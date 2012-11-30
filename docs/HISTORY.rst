@@ -1,6 +1,15 @@
 Changelog
 =========
 
+1.5 (2012-11-30)
+----------------
+
+- Let the folderish types derive from Products.ATContentTypes ATFolder instead
+  of plone.app.folder's implementation. It inherits some i18n classes. This
+  fixes the issue that on translation of folderish types LinguaPlone's
+  translation view wasn't shown.
+  [thet]
+
 1.4 (2012-11-28)
 ----------------
 

@@ -10,7 +10,7 @@ try:
     from plone.app.event.at import content as event
 except ImportError:
     from Products.ATContentTypes.content import event
-from plone.app.folder import folder
+from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
 from collective.folderishtypes.interfaces import IFolderishEvent

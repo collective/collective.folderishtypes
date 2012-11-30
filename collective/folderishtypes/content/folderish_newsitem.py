@@ -6,7 +6,7 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes import atapi
 from Products.ATContentTypes.content import newsitem
-from plone.app.folder import folder
+from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
 from collective.folderishtypes.interfaces import IFolderishNewsItem
