@@ -23,13 +23,9 @@ Alexander Limi also wished folderish content back in 2008:
 "#10: Content re-use is overrated — people like folderish"
 http://limi.net/articles/18-things-i-wish-were-true-about-plone/
 
-
-UPGRADE ISSUE WITH MISSING VIEWLET
-==================================
-
-If you have any issues with collective.folderishtypes after a upgrade, it might
-come from the now missing collective.folderishtypes.folderish_listing_viewlet.
-For now, please remove it manually via @@manage-viewlets.
+.. note::
+  If you use plone.app.event, please configure the Folderish_Event type to use
+  the @@event_view instead of the event_view.
 
 
 TODO
@@ -38,17 +34,19 @@ TODO
 - Depend on z3c.jbot, so that overriding folder_listing and folder_summary_view
   might also work at IPloneSite root.
 - Write tests
-- if appropriate: remove portlet and recomment the use of 
-  https://svn.plone.org/svn/collective/collective.portlet.localcontents/
+- See, if this portlet is useful:
+  https://github.com/RedTurtle/collective.portlet.localcontents
 
 
 Tested with
 ===========
 
-Plone 4
+Plone 4+
 
 
-Author
-======
+Contributors
+============
 
-Johannes Raggam <johannes@raggam.co.at>, BlueDynamics Alliance
+- Johannes Raggam <raggam-nl [at] adm [dot] at> (Author)
+
+- Robert Niederrreiter <rnix [at] squarewave [dot] at>
