@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.5'
+version = '1.6dev'
 
 setup(name='collective.folderishtypes',
       version=version,
@@ -26,4 +26,8 @@ setup(name='collective.folderishtypes',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      entry_points="""
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )

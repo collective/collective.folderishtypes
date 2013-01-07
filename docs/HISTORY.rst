@@ -1,6 +1,14 @@
 Changelog
 =========
 
+
+1.6dev (unreleased)
+-------------------
+
+- Add z3c.autoinclude.plugin entry point.
+  [thet]
+
+
 1.5 (2012-11-30)
 ----------------
 
@@ -9,6 +17,7 @@ Changelog
   fixes the issue that on translation of folderish types LinguaPlone's
   translation view wasn't shown.
   [thet]
+
 
 1.4 (2012-11-28)
 ----------------
@@ -20,17 +29,20 @@ Changelog
 - For folderish events, move the location field back to the main schemata.
   [thet]
 
+
 1.3 (2012-11-26)
 ----------------
 
 - Allow discussions from plone.app.discussion on Folderish Types.
   [thet]
 
+
 1.2.1 (2012-09-06)
 ------------------
 
 - CSS fix
   [rnix]
+
 
 1.2 (2012-09-04)
 ----------------
@@ -46,12 +58,14 @@ Changelog
   available.
   [thet]
 
+
 1.1.1 (2012-02-05)
 ------------------
 
 - Add a custom style class for the contextual contents portlet based on the
   portlet's name.
   [thet]
+
 
 1.1 (2012-02-04)
 ----------------
@@ -60,17 +74,20 @@ Changelog
   types in a portlet.
   [thet]
 
+
 1.0 (2012-02-02)
 ----------------
 
 - No Changes, release as 1.0 final.
   [thet]
 
+
 1.0b5 (2011-09-07)
 ------------------
 
 - Updated documentation: Missing viewlet issue.
   [thet]
+
 
 1.0b4 (2011-09-07)
 ------------------
@@ -103,11 +120,13 @@ Changelog
   implement __bobo_traverse__ too.
   [thet]
 
+
 1.0b3 (2011-03-22)
 ------------------
 
 - Add rolemap.xml for generic setup to have proper configured permissions.
   [thet]
+
 
 1.0b2 (2011-03-10)
 ------------------
@@ -118,6 +137,7 @@ Changelog
 
 - Updated folder_listing.pt and folder_summary_view.pt to current Plone trunk.
   [thet]
+
 
 1.0b1 (2011-02-18)
 ------------------
