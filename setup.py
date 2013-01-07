@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import os
 
 version = '1.6dev'
 
@@ -7,7 +6,7 @@ setup(name='collective.folderishtypes',
       version=version,
       description="Provides folderish types as a replacement for some ATContentTypes",
       long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.rst")).read(),
+                       open("CHANGES.rst").read(),
       # Get more strings from http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
         "Framework :: Plone",
