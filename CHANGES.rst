@@ -5,6 +5,9 @@ Changes
 1.6dev (unreleased)
 -------------------
 
+- Update translations and translate folder_listing.
+  [thet]
+
 - Add z3c.autoinclude.plugin entry point.
   [thet]
 

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.folderishtypes\n"
-"POT-Creation-Date: 2011-07-05 15:32+0000\n"
+"POT-Creation-Date: 2013-04-17 11:41+0000\n"
 "PO-Revision-Date: 2011-07-05 15:32+0000\n"
 "Last-Translator: Johannes Raggam <raggam-nl@adm.at>\n"
 "Language-Team: deutsch\n"
@@ -16,32 +16,64 @@ msgstr ""
 "Domain: plone\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#: collective/folderishtypes/profiles/default/types/Event.xml
+msgid "Event (Old, non-folderish)"
+msgstr "Termin (Ohne Ordnerverhalten)"
+
+#: collective/folderishtypes/profiles/default/types/News_Item.xml
+msgid "News Item (Old, non-folderish)"
+msgstr "Nachricht (Ohne Ordnerverhalten)"
+
+#: collective/folderishtypes/profiles/default/types/Document.xml
+msgid "Page (Old, non-folderish)"
+msgstr "Seite (Ohne Ordnerverhalten)"
+
+#. Default: "last modified"
+#: collective/folderishtypes/browser/folder_listing.pt:153
+#: collective/folderishtypes/browser/folder_summary_view.pt:85
+msgid "box_last_modified"
+msgstr ""
+
+#. Default: "Standard view"
+msgid "folder_listing"
+msgstr "Liste"
+
 #. Default: "A page in the site. Can contain rich text and behaves like a folder."
-#: ./profiles/default/types/Folderish_Document.xml
+#: collective/folderishtypes/profiles/default/types/Folderish_Document.xml
 msgid "folderish_document_desc"
 msgstr "Eine Seite. Diese Seite hat ein Ordnerverhalten und kann andere Objekte beinhalten."
 
-#. Default: "Page with Folder"
-#: ./profiles/default/types/Folderish_Document.xml
+#. Default: "Page"
+#: collective/folderishtypes/profiles/default/types/Folderish_Document.xml
+#, fuzzy
 msgid "folderish_document_title"
 msgstr "Seite mit Ordnerverhalten"
 
 #. Default: "Information about an upcoming event, which can be displayed in the calendar. This Event has folderish behavior."
-#: ./profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/profiles/default/types/Folderish_Event.xml
 msgid "folderish_event_desc"
 msgstr "Termine können im Kalender angezeigt werden. Dieser Termin hat ein Ordnerverhalten und kann andere Objekte beinhalten."
 
 #. Default: "Event"
-#: ./profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/profiles/default/types/Folderish_Event.xml
 msgid "folderish_event_title"
 msgstr "Termin"
 
 #. Default: "An announcement that will show up on the news portlet and in the news listing with folderish behavior."
-#: ./profiles/default/types/Folderish_News_Item.xml
+#: collective/folderishtypes/profiles/default/types/Folderish_News_Item.xml
 msgid "folderish_news_item_desc"
 msgstr "Eine Ankündigung, die in Nachrichtenübersichten aufgelistet wird. Diese Nachricht hat ein Ordnerverhalten und kann andere Objekte beinhalten."
 
-#. Default: "News Item with Folder"
-#: ./profiles/default/types/Folderish_News_Item.xml
+#. Default: "News Item"
+#: collective/folderishtypes/profiles/default/types/Folderish_News_Item.xml
+#, fuzzy
 msgid "folderish_news_item_title"
 msgstr "Nachricht"
+
+#: collective/folderishtypes/profiles/default/types/Folderish_Event.xml
+msgid "iCalendar"
+msgstr ""
+
+#: collective/folderishtypes/profiles/default/types/Folderish_Event.xml
+msgid "vCalendar"
+msgstr ""

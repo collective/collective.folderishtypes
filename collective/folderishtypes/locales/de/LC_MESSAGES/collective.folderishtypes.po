@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2010-12-21 13:17+0000\n"
+"POT-Creation-Date: 2013-04-17 11:41+0000\n"
 "PO-Revision-Date: 2011-07-05 17:36+0000\n"
 "Last-Translator: johannes raggam <raggam-nl@adm.at>\n"
 "Language-Team: deutsch\n"
@@ -17,17 +17,83 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.folderishtypes\n"
 
+#. Default: "Select the content types that should be shown."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:35
+msgid "ctxcontents_help_allowed_types"
+msgstr "Selektieren Sie die Inhaltstypen, die angezeigt werden sollen."
+
+#. Default: "Display images inline."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:45
+msgid "ctxcontents_help_display_images"
+msgstr "Bilder direkt anzeigen anstatt zu verlinken."
+
+#. Default: "Select, which image scale should be used for the portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:52
+msgid "ctxcontents_help_image_scale"
+msgstr "Wählen Sie die Bildgröße, die im Portlet dargestellt werden soll."
+
+#. Default: "The title of the Contextual Contents portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:28
+msgid "ctxcontents_help_title"
+msgstr "Titel des Portlets."
+
+#. Default: "Allowed Types"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:34
+msgid "ctxcontents_label_allowed_types"
+msgstr "Erlaubte Inhaltstypen"
+
+#. Default: "Display Images"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:44
+msgid "ctxcontents_label_display_images"
+msgstr "Bilder anzeigen"
+
+#. Default: "Image Scale"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:51
+msgid "ctxcontents_label_image_scale"
+msgstr "Bildgröße"
+
+#. Default: "Title"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:27
+msgid "ctxcontents_label_title"
+msgstr "Titel"
+
 #. Default: "This portlet shows the contents of folderish types."
-#: ./browser/listing_portlet.py:26
+#: collective/folderishtypes/browser/listing_portlet.py:26
 msgid "listingportlet_help_add"
 msgstr "Dieses Portlet zeigt die Inhalte eines Inhaltstyps mit Ordnerverhalten an."
 
 #. Default: "Add portlet for folderish types"
-#: ./browser/listing_portlet.py:25
+#: collective/folderishtypes/browser/listing_portlet.py:25
 msgid "listingportlet_label_add"
 msgstr "Portlet für Inhalt mit Ordnerverhalten hinzufügen."
 
 #. Default: "Folderish Contenttype Listing Portlet"
-#: ./browser/listing_portlet.py:21
+#: collective/folderishtypes/browser/listing_portlet.py:21
 msgid "listingportlet_title"
 msgstr "Portlet für Inhalt mit Ordnerverhalten"
+
+#. Default: "This portlet shows items of a specific Type which are in the current folder."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:100
+msgid "portlet_ctxcontents_help_add"
+msgstr "Dieses Portlet zeigt Inhalte eines bestimmten Typs des aktuellen Ordners im Portlet an."
+
+#. Default: "This portlet shows items of a specific Type which are in the current folder."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:108
+msgid "portlet_ctxcontents_help_edit"
+msgstr "Dieses Portlet zeigt Inhalte eines bestimmten Typs des aktuellen Ordners im Portlet an."
+
+#. Default: "Add Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:99
+msgid "portlet_ctxcontents_label_add"
+msgstr "Contextual Contents Portlet hinzufügen"
+
+#. Default: "Edit Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:107
+msgid "portlet_ctxcontents_label_edit"
+msgstr "Contextual Contents Portlet editieren"
+
+#. Default: "Contextual Contents Portlet"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:95
+msgid "portlet_ctxcontents_title"
+msgstr "Contextual Contents Portlet"
+
