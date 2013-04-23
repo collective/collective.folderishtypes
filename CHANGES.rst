@@ -2,8 +2,8 @@ Changes
 =======
 
 
-1.6dev (unreleased)
--------------------
+1.6 (2013-04-23)
+----------------
 
 - Update translations and translate folder_listing.
   [thet]
