@@ -1,6 +1,14 @@
 Changes
 =======
 
+1.7dev (unreleased)
+-------------------
+
+- More documentation: How To create own content types based on
+  collective.folderishtypes, How to migrate non-folderishtypes to folderish
+  ones.
+  [thet]
+
 
 1.6 (2013-04-23)
 ----------------

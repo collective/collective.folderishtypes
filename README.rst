@@ -28,6 +28,30 @@ http://limi.net/articles/18-things-i-wish-were-true-about-plone/
   the @@event_view instead of the event_view.
 
 
+How To create own content types based on collective.folderishtypes
+==================================================================
+
+You can subclass the content classes from ``collective.folderishtypes.content``
+and use it's schema to create own content types based on
+``collective.folderishtypes``, as you would do to subclass for any other
+Archetypes based content type.
+
+
+How to migrate non-folderishtypes to folderish ones
+===================================================
+
+Non-folderish content types are missing some btree attributes, which folderish
+content types have (See ``Products.BtreeFolder2.BTreeFolder2Base._initBtrees``
+).
+
+plone.app.folder provides an upgrade view to migrate pre-plone.app.folder (or
+non-folderish) types to the new Btree based implementation (defined in:
+``plone.app.folder.migration.BTreeMigrationView``).
+
+To upgrade your non-folderish content types to folderish ones, just call
+``@@migrate-btrees`` on your Plone site root, and you're done.
+
+
 TODO
 ====
 
