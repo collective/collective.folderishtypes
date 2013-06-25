@@ -4,6 +4,13 @@ Changes
 1.7dev (unreleased)
 -------------------
 
+- Remove bobo_traverse in Foldersh News Item, since plone.app.imaging does the
+  traversing.
+  [thet]
+
+- Remove vCalendar action entry from FTI config of Folderish Event.
+  [thet]
+
 - More documentation: How To create own content types based on
   collective.folderishtypes, How to migrate non-folderishtypes to folderish
   ones.
