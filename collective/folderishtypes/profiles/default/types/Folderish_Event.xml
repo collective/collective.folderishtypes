@@ -41,11 +41,7 @@
     i18n:attributes="title">
   <permission value="View"/>
  </action>
- <action title="vCalendar" action_id="vcs" category="document_actions"
-    condition_expr="" url_expr="string:${object_url}/vcs_view" visible="True"
-    i18n:attributes="title">
-  <permission value="View"/>
- </action>
+ <action title="vCalendar" remove="true"></action>
  <action title="History" action_id="history" category="object"
     condition_expr="" url_expr="string:${object_url}/atct_history"
     visible="False" i18n:attributes="title">
