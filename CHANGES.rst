@@ -1,8 +1,8 @@
 Changes
 =======
 
-1.7dev (unreleased)
--------------------
+1.7 (2013-08-23)
+----------------
 
 - Remove bobo_traverse in Foldersh News Item, since plone.app.imaging does the
   traversing.
