@@ -19,10 +19,10 @@
                                  item_view_url python:item_type in use_view_action and '%s/view' % item_url or item_url">
 
                     <a href="#"
-                       tal:condition="exists:item_object/image_thumb"
-                       tal:attributes="href item_view_url">
-                        <img src="" alt=""
-                             tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
+                        tal:define="have_img python:hasattr(item_object, 'Schema') and 'image' in item_object.Schema();"
+                        tal:attributes="href item_view_url"
+                        tal:condition="have_img">
+                        <img tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
                     </a>
 
                     <h2 class="tileHeadline"

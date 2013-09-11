@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.8dev (unreleased)
+-------------------
+
+- In folder_summary_view do a more sane check, an image is available.
+  [thet]
+
+
 1.7 (2013-08-23)
 ----------------
 
