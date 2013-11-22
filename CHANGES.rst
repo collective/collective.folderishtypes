@@ -1,10 +1,10 @@
 Changes
 =======
 
-1.8dev (unreleased)
--------------------
+1.8 (2013-11-23)
+----------------
 
-- In folder_summary_view do a more sane check, an image is available.
+- In folder_summary_view do a more sane check, if an image is available.
   [thet]
 
 
