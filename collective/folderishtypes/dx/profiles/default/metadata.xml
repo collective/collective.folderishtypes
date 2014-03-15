@@ -1,0 +1,7 @@
+<metadata>
+ <version>1</version>
+ <dependencies>
+  <dependency>profile-collective.folderishtypes:default</dependency>
+  <dependency>profile-plone.app.contenttypes:default</dependency>
+ </dependencies>
+</metadata>

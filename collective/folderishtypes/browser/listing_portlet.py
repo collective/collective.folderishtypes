@@ -10,23 +10,33 @@ from zope.component import getMultiAdapter
 from collective.folderishtypes import MsgFact as _
 from collective.folderishtypes.interfaces import IFolderishType
 
+
 class IListingPortlet(IPortletDataProvider):
     pass
+
 
 class Assignment(base.Assignment):
     implements(IListingPortlet)
 
     @property
     def title(self):
-        return _(u"listingportlet_title", u"Folderish Contenttype Listing Portlet")
+        return _(
+            u"listingportlet_title",
+            default=u"Folderish Contenttype Listing Portlet"
+        )
+
 
 class AddForm(base.NullAddForm):
     form_fields = form.Fields(IListingPortlet)
     label = _(u"listingportlet_label_add", u"Add portlet for folderish types")
-    description = _(u"listingportlet_help_add", u"This portlet shows the contents of folderish types.")
+    description = _(
+        u"listingportlet_help_add",
+        default=u"This portlet shows the contents of folderish types."
+    )
 
     def create(self):
         return Assignment()
+
 
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('listing_portlet.pt')
@@ -34,7 +44,10 @@ class Renderer(base.Renderer):
     def __init__(self, *args):
         base.Renderer.__init__(self, *args)
         context = aq_inner(self.context)
-        portal_state = getMultiAdapter((context, self.request), name=u'plone_portal_state')
+        portal_state = getMultiAdapter(
+            (context, self.request),
+            name=u'plone_portal_state'
+        )
         self.anonymous = portal_state.anonymous()
 
     @property

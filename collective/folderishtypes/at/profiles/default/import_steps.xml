@@ -2,8 +2,8 @@
 <import-steps>
   <import-step
     id="collective.folderishtypes-default"
-    handler="collective.folderishtypes.setuphandlers.setup"
-    title="collective.folderishtypes default setup"
+    handler="collective.folderishtypes.at.setuphandlers.setup"
+    title="collective.folderishtypes archetypes default setup"
     version="1.0">
     <dependency step="plone-final"/>
   </import-step>

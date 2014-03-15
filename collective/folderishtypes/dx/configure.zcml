@@ -1,0 +1,23 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:gs="http://namespaces.zope.org/genericsetup"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           i18n_domain="collective.folderishtypes">
+
+  <include package="plone.app.contenttypes"/>
+
+  <configure zcml:condition="installed Products.ATContentTypes">
+  <include
+      zcml:condition="installed archetypes.schemaextender"
+      package=".migration"/>
+  </configure>
+
+  <gs:registerProfile
+      name="default"
+      title="Dexterity-based Plone Default Types with folderish behavior"
+      directory="profiles/default"
+      description="This provides Plones default types"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+ </configure>

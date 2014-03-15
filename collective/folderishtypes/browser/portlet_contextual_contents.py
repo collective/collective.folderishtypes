@@ -24,15 +24,21 @@ DEFAULT_ALLOWED_TYPES = (
 class IContextualContentsPortlet(IPortletDataProvider):
 
     name = schema.TextLine(
-            title=_(u"ctxcontents_label_title", default=u"Title"),
-            description=_(u"ctxcontents_help_title",
-                          default=u"The title of the Contextual Contents portlet."),
-            default=u"",
-            required=False)
+        title=_(u"ctxcontents_label_title", default=u"Title"),
+        description=_(
+            u"ctxcontents_help_title",
+            default=u"The title of the Contextual Contents portlet."
+        ),
+        default=u"",
+        required=False
+    )
 
     allowed_types = schema.Tuple(
         title=_(u"ctxcontents_label_allowed_types", u"Allowed Types"),
-        description=_(u"ctxcontents_help_allowed_types", u"Select the content types that should be shown."),
+        description=_(
+            u"ctxcontents_help_allowed_types",
+            u"Select the content types that should be shown."
+        ),
         default=DEFAULT_ALLOWED_TYPES,
         required=True,
         value_type=schema.Choice(
@@ -42,7 +48,10 @@ class IContextualContentsPortlet(IPortletDataProvider):
 
     display_images = schema.Bool(
         title=_(u"ctxcontents_label_display_images", u"Display Images"),
-        description=_(u"ctxcontents_help_display_images", u"Display images inline."),
+        description=_(
+            u"ctxcontents_help_display_images",
+            u"Display images inline."
+        ),
         default=False,
         required=False,
     )
@@ -57,6 +66,7 @@ class IContextualContentsPortlet(IPortletDataProvider):
         vocabulary="collective.folderishtypes.ImageScaleVocabulary",
     )
 
+
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('portlet_contextual_contents.pt')
 
@@ -69,7 +79,7 @@ class Renderer(base.Renderer):
             parent = aq_parent(context)
             if parent.defaultView() == context.id:
                 context = parent
-        cat = getToolByName(context,'portal_catalog')
+        cat = getToolByName(context, 'portal_catalog')
         query = {}
         query['portal_type'] = self.data.allowed_types
         query['path'] = {'query': '/'.join(context.getPhysicalPath())}
@@ -78,10 +88,13 @@ class Renderer(base.Renderer):
         brains = cat(**query)
         return brains
 
+
 class Assignment(base.Assignment):
     implements(IContextualContentsPortlet)
 
-    def __init__(self, name = u"Contextual Contents",
+    def __init__(
+            self,
+            name=u"Contextual Contents",
             allowed_types=DEFAULT_ALLOWED_TYPES,
             display_images=False,
             image_scale=None):
@@ -92,17 +105,36 @@ class Assignment(base.Assignment):
 
     @property
     def title(self):
-        return _(u'portlet_ctxcontents_title', default=u"Contextual Contents Portlet")
+        return _(
+            u'portlet_ctxcontents_title',
+            default=u"Contextual Contents Portlet"
+        )
+
 
 class AddForm(base.AddForm):
     form_fields = form.Fields(IContextualContentsPortlet)
-    label = _(u'portlet_ctxcontents_label_add', default=u"Add Contextual Contents Portlet.")
-    description = _(u'portlet_ctxcontents_help_add', default=u"This portlet shows items of a specific Type which are in the current folder.")
+    label = _(
+        u'portlet_ctxcontents_label_add',
+        default=u"Add Contextual Contents Portlet."
+    )
+    description = _(
+        u'portlet_ctxcontents_help_add',
+        default=u"This portlet shows items of a specific Type which are in "
+                u"the current folder."
+    )
 
     def create(self, data):
         return Assignment(**data)
 
+
 class EditForm(base.EditForm):
     form_fields = form.Fields(IContextualContentsPortlet)
-    label = _(u'portlet_ctxcontents_label_edit', default=u"Edit Contextual Contents Portlet.")
-    description = _(u'portlet_ctxcontents_help_edit', default=u"This portlet shows items of a specific Type which are in the current folder.")
+    label = _(
+        u'portlet_ctxcontents_label_edit',
+        default=u"Edit Contextual Contents Portlet."
+    )
+    description = _(
+        u'portlet_ctxcontents_help_add',
+        default=u"This portlet shows items of a specific Type which are in "
+                u"the current folder."
+    )

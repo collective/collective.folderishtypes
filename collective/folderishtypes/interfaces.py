@@ -1,17 +1,21 @@
 from zope.interface import Interface
 
+
 class IFolderishType(Interface):
-    """ Marker interface
+    """Marker interface
     """
+
 
 class IFolderishDocument(IFolderishType):
-    """ Marker interface
+    """Marker interface
     """
+
 
 class IFolderishEvent(IFolderishType):
-    """ Marker interface
+    """Marker interface
     """
 
+
 class IFolderishNewsItem(IFolderishType):
-    """ Marker interface
+    """Marker interface
     """

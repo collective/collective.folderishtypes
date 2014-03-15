@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<object name="Folderish Document"
+<object name="Folderish News Item"
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
- <property name="title" i18n:translate="folderish_document_title">Page</property>
- <property name="description" i18n:translate="folderish_document_desc">A page in the site. Can contain rich text and behaves like a folder.</property>
+ <property name="title" i18n:translate="folderish_news_item_title">News Item</property>
+ <property name="description" i18n:translate="folderish_news_item_desc">An announcement that will show up on the news portlet and in the news listing with folderish behavior.</property>
 
- <property name="content_meta_type">FolderishDocument</property>
- <property name="product">collective.folderishtypes</property>
- <property name="factory">addFolderishDocument</property>
+ <property name="content_meta_type">FolderishNewsItem</property>
+ <property name="product">collective.folderishtypes.at</property>
+ <property name="factory">addFolderishNewsItem</property>
 
- <property name="immediate_view">document_view</property>
+ <property name="immediate_view">newsitem_view</property>
 
  <property name="global_allow">True</property>
  <property name="filter_content_types">False</property>
 
  <property name="allow_discussion">False</property>
 
- <property name="default_view">document_view</property>
+ <property name="default_view">newsitem_view</property>
  <property name="view_methods">
-  <element value="document_view"/>
+  <element value="newsitem_view"/>
  </property>
 
  <alias from="(Default)" to="(dynamic view)"/>
@@ -27,11 +27,13 @@
  <alias from="sharing" to="@@sharing"/>
  <alias from="view" to="(selected layout)"/>
  <action title="View" action_id="view" category="object" condition_expr=""
-    url_expr="string:${object_url}" visible="True" i18n:attributes="title">
+    url_expr="string:${object_url}" visible="True"
+    i18n:attributes="title">
   <permission value="View"/>
  </action>
  <action title="Edit" action_id="edit" category="object" condition_expr="not:object/@@plone_lock_info/is_locked_for_current_user|python:True"
-    url_expr="string:${object_url}/edit" visible="True" i18n:attributes="title">
+    url_expr="string:${object_url}/edit" visible="True"
+    i18n:attributes="title">
   <permission value="Modify portal content"/>
  </action>
  <action title="History" action_id="history" category="object"

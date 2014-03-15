@@ -50,9 +50,9 @@ class FolderishTypesConversationView(ConversationView):
             return False
 
         # Always return False if object is a folder
-        if (not IFolderishType.providedBy(context) and
-            IFolderish.providedBy(context) and
-            not INonStructuralFolder.providedBy(context)):
+        if (not IFolderishType.providedBy(context)
+                and IFolderish.providedBy(context)
+                and not INonStructuralFolder.providedBy(context)):
             return False
 
         def traverse_parents(context):
@@ -60,8 +60,8 @@ class FolderishTypesConversationView(ConversationView):
             # enabled in a parent folder.
             for obj in aq_chain(context):
                 if not IPloneSiteRoot.providedBy(obj):
-                    if (IFolderish.providedBy(obj) and
-                        not INonStructuralFolder.providedBy(obj)):
+                    if (IFolderish.providedBy(obj)
+                            and not INonStructuralFolder.providedBy(obj)):
                         flag = getattr(obj, 'allow_discussion', None)
                         if flag is not None:
                             return flag

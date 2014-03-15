@@ -1,36 +1,37 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.folderishtypes">
 
-    <i18n:registerTranslations directory="locales" />
-    <five:registerPackage package="." initialize=".initialize" />
+  <i18n:registerTranslations directory="locales"/>
 
-    <include package="plone.app.portlets" />
-    <include package=".browser" />
+  <include zcml:condition="installed Products.ATContentTypes" package=".at"/>
+  <include zcml:condition="installed plone.dexterity" package=".dx"/>
 
-    <utility
-        component=".vocabularies.ImageScaleVocabulary"
-        name="collective.folderishtypes.ImageScaleVocabulary"
-    />
+  <include package="plone.app.portlets"/>
+  <include package=".browser"/>
+
+  <utility
+      component=".vocabularies.ImageScaleVocabulary"
+      name="collective.folderishtypes.ImageScaleVocabulary"/>
     
-    <genericsetup:registerProfile
-        name="default"
-        title="collective.folderishtypes: default"
-        directory="profiles/default"
-        description="collective.folderishtypes default profile: Installs
-                     the folderish content types in Plone."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
-    <genericsetup:registerProfile
-        name="portlets"
-        title="collective.folderishtypes: Example portlets for folderish types"
-        directory="profiles/portlets"
-        description="collective.folderishtypes portlet profile: Adds example
-                     portlets for Folderish Types."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+  <gs:registerProfile
+      name="default"
+      title="collective.folderishtypes: default"
+      directory="profiles/default"
+      description="collective.folderishtypes default profile: Installs
+                   the folderish content types in Plone."
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
+  <gs:registerProfile
+      name="portlets"
+      title="collective.folderishtypes: Example portlets for folderish types"
+      directory="profiles/portlets"
+      description="collective.folderishtypes portlet profile: Adds example
+                   portlets for Folderish Types."
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
 </configure>

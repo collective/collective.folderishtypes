@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.folderishtypes">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <gs:registerProfile
+        name="default"
+        title="collective.folderishtypes: Archetypes Default"
+        directory="profiles/default"
+        description="collective.folderishtypes archetypes default profile:
+                     Installs Archetypes based folderish content types in
+                     Plone."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>
+
+

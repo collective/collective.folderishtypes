@@ -1,6 +1,7 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+from setuptools import find_packages
 
-version = '1.8'
+version = '2.0dev'
 
 setup(name='collective.folderishtypes',
       version=version,
