@@ -3,18 +3,18 @@
 
   <!-- Install new CT -->
   <object name="Folderish Document"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
   <object name="Folderish Event"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
   <object name="Folderish News Item"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
 
   <!-- Remove old CT -->
   <object name="Document"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
   <object name="Event"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
   <object name="News Item"
-    meta_type="Factory-based Type Information with dynamic views"/>
+      meta_type="Factory-based Type Information with dynamic views"/>
 
 </object>
