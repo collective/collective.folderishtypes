@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission remove="True" name="collective.folderishtypes: Add Folderish Document"/>
+    <permission remove="True" name="collective.folderishtypes: Add Folderish Event"/>
+    <permission remove="True" name="collective.folderishtypes: Add Folderish News Item"/>
+  </permissions>
+</rolemap>

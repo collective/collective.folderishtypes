@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object>
+ <resourcetypes>
+  <linkable purge="False">
+   <element remove="True" value="Folderish Event"/>
+   <element remove="True" value="Folderish Document"/>
+   <element remove="True" value="Folderish News Item"/>
+  </linkable>
+  <containsobjects purge="False">
+   <element remove="True" value="Folderish Event"/>
+   <element remove="True" value="Folderish Document"/>
+   <element remove="True" value="Folderish News Item"/>
+  </containsobjects>
+  <containsanchors purge="False">
+   <element remove="True" value="Folderish Event"/>
+   <element remove="True" value="Folderish Document"/>
+   <element remove="True" value="Folderish News Item"/>
+  </containsanchors>
+ </resourcetypes>
+</object>

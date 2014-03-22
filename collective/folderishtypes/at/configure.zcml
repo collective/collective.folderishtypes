@@ -14,9 +14,12 @@
         description="collective.folderishtypes archetypes default profile:
                      Installs Archetypes based folderish content types in
                      Plone."
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+        provides="Products.GenericSetup.interfaces.EXTENSION"/>
+    <gs:registerProfile
+        name="uninstall"
+        title="collective.folderishtypes: Archetypes Uninstall"
+        directory="profiles/uninstall"
+        description="Remove collective.folderishtypes Archetype Types."
+        provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
 </configure>
-
-
