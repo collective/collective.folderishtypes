@@ -26,6 +26,11 @@ setup(name='collective.folderishtypes',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'dexterity': [
+              'plone.app.contenttypes',
+          ],
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone

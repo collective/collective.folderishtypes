@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="plone">
+  <portlet remove="True"
+      addview="collective.folderishtypes.contextual_contents"
+      title="Contextual Contents Portlet"/>
+  <portlet remove="True"
+      addview="collective.folderishtypes.listing"
+      title="Folderish Contenttype Listing Portlet"/>
+</portlets>

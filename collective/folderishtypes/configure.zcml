@@ -34,4 +34,11 @@
                    portlets for Folderish Types."
       provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
+  <gs:registerProfile
+      name="uninstall"
+      title="collective.folderishtypes: uninstall"
+      directory="profiles/uninstall"
+      description="collective.folderishtypes uninstall profile"
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
 </configure>
