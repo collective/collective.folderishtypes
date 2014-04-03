@@ -14,7 +14,7 @@
 
   <gs:registerProfile
       name="default"
-      title="Dexterity-based Plone Default Types with folderish behavior"
+      title="collective.folderishtypes: plone.app.contenttypes types with folderish behavior"
       directory="profiles/default"
       description="This provides Plones default types"
       provides="Products.GenericSetup.interfaces.EXTENSION"
