@@ -1,6 +1,13 @@
 Changes
 =======
 
+2.0 (unreleased)
+----------------
+
+- Dexterity support.
+  [thet]
+
+
 1.8 (2013-11-23)
 ----------------
 
