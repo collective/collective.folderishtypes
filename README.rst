@@ -24,8 +24,20 @@ Alexander Limi also wished folderish content back in 2008:
 http://limi.net/articles/18-things-i-wish-were-true-about-plone/
 
 .. note::
-  If you use plone.app.event, please configure the Folderish_Event type to use
-  the @@event_view instead of the event_view.
+  To use this package, explicitly include the ``at`` respectively the ``dx``
+  subpackage. They are not included by default, so that no unnecessary zcml
+  registrations are loaded. E.g. there are some browser pages used for the
+  Archetypes version, which might not helpful for the Dexterity version.
+
+Include the Archetypes version Like so::
+
+  <include package="collective.folderishtypes"/>
+  <include package="collective.folderishtypes.at"/>
+
+And the Dexterity version like so::
+
+  <include package="collective.folderishtypes"/>
+  <include package="collective.folderishtypes.dx"/>
 
 
 How To create own content types based on collective.folderishtypes

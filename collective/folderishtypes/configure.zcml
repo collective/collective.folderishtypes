@@ -8,9 +8,6 @@
 
   <i18n:registerTranslations directory="locales"/>
 
-  <include zcml:condition="installed Products.ATContentTypes" package=".at"/>
-  <include zcml:condition="installed plone.dexterity" package=".dx"/>
-
   <include package=".browser"/>
 
   <utility
