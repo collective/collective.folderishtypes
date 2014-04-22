@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object meta_type="Plone Types Tool" name="portal_types">
-  <object remove="True" name="Folderish Document"  meta_type="Factory-based Type Information with dynamic views"/>
-  <object remove="True" name="Folderish Event"     meta_type="Factory-based Type Information with dynamic views"/>
-  <object remove="True" name="Folderish News Item" meta_type="Factory-based Type Information with dynamic views"/>
+  <object meta_type="Dexterity FTI" name="Document" />
+  <object meta_type="Dexterity FTI" name="News Item" />
+  <object meta_type="Dexterity FTI" name="Event" />
 </object>

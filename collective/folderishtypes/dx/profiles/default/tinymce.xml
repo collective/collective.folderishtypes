@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object>
+ <resourcetypes>
+  <containsobjects purge="False">
+   <element value="Event"/>
+   <element value="Document"/>
+   <element value="News Item"/>
+  </containsobjects>
+ </resourcetypes>
+</object>
+
