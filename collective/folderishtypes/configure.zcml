@@ -11,7 +11,6 @@
   <include zcml:condition="installed Products.ATContentTypes" package=".at"/>
   <include zcml:condition="installed plone.dexterity" package=".dx"/>
 
-  <include package="plone.app.portlets"/>
   <include package=".browser"/>
 
   <utility

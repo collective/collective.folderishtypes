@@ -6,6 +6,7 @@
     i18n_domain="collective.folderishtypes">
 
     <five:registerPackage package="." initialize=".initialize" />
+    <include package=".browser"/>
 
     <gs:registerProfile
         name="default"

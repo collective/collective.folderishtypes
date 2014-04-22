@@ -24,10 +24,11 @@ class FolderishTypesConversationView(ConversationView):
         1) Check if discussion is enabled globally in the plone.app.discussion
            registry/control panel.
 
-        2) If the current content object is a folder, always return
-           False, since we don't allow comments on a folder. This
-           setting is used to allow/ disallow comments for all content
-           objects inside a folder, not for the folder itself.
+        2) If the current content object is a folder, always return False,
+           since we don't allow comments on a folder. This setting is used to
+           allow/ disallow comments for all content objects inside a folder,
+           not for the folder itself. This does not apply to IFolderishType
+           objects.
 
         3) Check if the allow_discussion boolean flag on the content object is
            set. If it is set to True or False, return the value. If it set to
@@ -49,7 +50,7 @@ class FolderishTypesConversationView(ConversationView):
         if not settings.globally_enabled:
             return False
 
-        # Always return False if object is a folder
+        # Always return False if object is a folder, except for folderish types
         if (not IFolderishType.providedBy(context)
                 and IFolderish.providedBy(context)
                 and not INonStructuralFolder.providedBy(context)):
