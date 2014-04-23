@@ -6,11 +6,12 @@
 
   <include package="plone.app.contenttypes"/>
 
-  <configure zcml:condition="installed Products.ATContentTypes">
+  <!-- depends on p.a.c 1.2.x -->
+  <!--configure zcml:condition="installed Products.ATContentTypes">
   <include
       zcml:condition="installed archetypes.schemaextender"
       package=".migration"/>
-  </configure>
+  </configure-->
 
   <gs:registerProfile
       name="default"
