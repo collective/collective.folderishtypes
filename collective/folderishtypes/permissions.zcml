@@ -1,0 +1,11 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+  <permission
+      id="collective.folderishtypes.AddFolderishEvent"
+      title="collective.folderishtypes: Add Folderish Event"/>
+  <permission
+      id="collective.folderishtypes.AddFolderishDocument"
+      title="collective.folderishtypes: Add Folderish Document"/>
+  <permission
+      id="collective.folderishtypes.AddFolderishNewsItem"
+      title="collective.folderishtypes: Add Folderish News Item"/>
+</configure>
