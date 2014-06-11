@@ -6,6 +6,8 @@ Changes
 
 - Dexterity support.
   [thet]
+- included profile with condition on p.a.contenttypes
+  [agitator]
 
 
 1.8 (2013-11-23)
