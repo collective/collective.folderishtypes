@@ -23,4 +23,13 @@
       editview=".portlet_contextual_contents.EditForm"
       />
 
+  <browser:viewlet
+      name="collective.folderishtypes.contents_viewlet"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      template="listing_viewlet.pt"
+      for="collective.folderishtypes.interfaces.IFolderishType"
+      permission="zope2.View"
+      />
+
+
 </configure>
