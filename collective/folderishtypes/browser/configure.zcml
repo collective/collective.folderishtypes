@@ -24,9 +24,9 @@
       />
 
   <browser:viewlet
-      name="collective.folderishtypes.contents_viewlet"
+      name="collective.folderishtypes.listing_viewlet"
       manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-      template="listing_viewlet.pt"
+      class=".viewlets.ListingViewlet"
       for="collective.folderishtypes.interfaces.IFolderishType"
       permission="zope2.View"
       />

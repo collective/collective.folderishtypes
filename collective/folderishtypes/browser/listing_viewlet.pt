@@ -1,4 +1,4 @@
-<div class="contentsListing">
+<div class="contentsListing" tal:condition="view/available">
     <metal:listingmacro define-macro="listing">
 		<tal:documentcontents define="documentContents context/@@folderListing;
                                       batch documentContents;">
