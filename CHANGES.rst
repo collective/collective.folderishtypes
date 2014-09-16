@@ -6,7 +6,11 @@ Changes
 
 - Dexterity support.
   [thet]
-- included profile with condition on p.a.contenttypes
+
+- Add content listing viewlet.
+  [agitator]
+
+- Included profile with condition on p.a.contenttypes.
   [agitator]
 
 
