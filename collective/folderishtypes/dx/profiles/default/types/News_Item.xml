@@ -3,4 +3,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
   <property name="filter_content_types">False</property>
   <property name="klass">collective.folderishtypes.dx.content.FolderishNewsItem</property>
+  <property name="behaviors" purge="false">
+    <element value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
+  </property>
 </object>
