@@ -27,9 +27,8 @@ setup(name='collective.folderishtypes',
           # -*- Extra requirements: -*-
       ],
       extras_require={
-          'dexterity': [
-              'plone.app.contenttypes',
-          ],
+          'dexterity': ['plone.app.contenttypes', ],
+          'migration': ['Products.contentmigration', ],
       },
       entry_points="""
       [z3c.autoinclude.plugin]

@@ -17,6 +17,10 @@ Changes
 1.9 (unreleased)
 ----------------
 
+- Add migration step for Products.PloneArticle objects to Foldersh Document
+  objects.
+  [thet]
+
 - Initialize permissions and roles.
   [thet]
 

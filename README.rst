@@ -49,6 +49,15 @@ and use it's schema to create own content types based on
 Archetypes based content type.
 
 
+How to migrate Products.PloneArticle documents to Folderish Document
+====================================================================
+
+A upgrade step "PloneArticle to Folderish Document"	in the
+collective.folderishtypes default profile for migrating PloneArticle objects to
+Folderish Document objects is provided. Note, this does not cover
+PloneArticleMultiPage at the moment.
+
+
 How to migrate non-folderishtypes to folderish ones
 ===================================================
 
