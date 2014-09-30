@@ -25,6 +25,9 @@ setup(name='collective.folderishtypes',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'migration': ['Products.contentmigration', ],
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone

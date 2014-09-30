@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.folderishtypes">
+
+  <genericsetup:upgradeStep
+      zcml:condition="installed Products.PloneArticle"
+      title="PloneArticle to Folderish Document"
+      description="Migrate PloneArticle objects to Folderish Document objects, including images, files and links contents."
+      handler=".migrate_plonearticle.migrate"
+      profile="collective.folderishtypes:default"
+      />
+
+</configure>
