@@ -24,6 +24,10 @@ class PloneArticleMigrator(ATItemMigrator):
         folderish document.
         """
         for item in self.old.getFiles():
+
+            if 'files' not in self.new.contentIds():
+                self.new.invokeFactory('Folder', 'files', 'files')
+
             id_ = item.id
             title = item.title
             description = item.description()
@@ -32,16 +36,17 @@ class PloneArticleMigrator(ATItemMigrator):
             creation_date = item.CreationDate()
             modification_date = item.ModificationDate()
 
-            self.new.invokeFactory(
+            self.new.files.invokeFactory(
                 "File",
                 id_,
-                title,
+                title=title,
                 description=description
             )
-            self.new[id_].setFile(data)
+            item_new = self.new.files[id_]
+            item_new.setFile(data)
 
-            self.new[id_].creation_date = DateTime(creation_date)
-            self.new[id_].setModificationDate(DateTime(modification_date))
+            item_new.creation_date = DateTime(creation_date)
+            item_new.setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated file %s for %s' % (id_, self.new.absolute_url()))
@@ -51,6 +56,10 @@ class PloneArticleMigrator(ATItemMigrator):
         folderish document.
         """
         for item in self.old.getImages():
+
+            if 'images' not in self.new.contentIds():
+                self.new.invokeFactory('Folder', 'images', 'images')
+
             id_ = item.id
             title = item.title
             description = item.description()
@@ -59,16 +68,17 @@ class PloneArticleMigrator(ATItemMigrator):
             creation_date = item.CreationDate()
             modification_date = item.ModificationDate()
 
-            self.new.invokeFactory(
+            self.new.images.invokeFactory(
                 "Image",
                 id_,
-                title,
+                title=title,
                 description=description
             )
-            self.new[id_].setImage(data)
+            item_new = self.new.images[id_]
+            item_new.setImage(data)
 
-            self.new[id_].creation_date = DateTime(creation_date)
-            self.new[id_].setModificationDate(DateTime(modification_date))
+            item_new.creation_date = DateTime(creation_date)
+            item_new.setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated image %s for %s' % (id_, self.new.absolute_url()))
@@ -78,6 +88,10 @@ class PloneArticleMigrator(ATItemMigrator):
         folderish document.
         """
         for item in self.old.getLinks():
+
+            if 'links' not in self.new.contentIds():
+                self.new.invokeFactory('Folder', 'links', 'links')
+
             id_ = item.id
             title = item.title
             description = item.description()
@@ -86,16 +100,16 @@ class PloneArticleMigrator(ATItemMigrator):
             creation_date = item.CreationDate()
             modification_date = item.ModificationDate()
 
-            self.new.invokeFactory(
+            self.new.links.invokeFactory(
                 "Link",
                 id_,
-                title,
+                title=title,
                 description=description,
                 remoteUrl=data
             )
-
-            self.new[id_].creation_date = DateTime(creation_date)
-            self.new[id_].setModificationDate(DateTime(modification_date))
+            item_new = self.new.links[id_]
+            item_new.creation_date = DateTime(creation_date)
+            item_new.setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated link %s for %s' % (id_, self.new.absolute_url()))
