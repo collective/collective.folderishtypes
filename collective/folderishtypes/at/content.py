@@ -88,23 +88,4 @@ class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
     portal_type = 'Folderish News Item'
     _at_rename_after_creation = True
     schema = type_schema
-
-    # TODO: confirm and remove the following,
-    #       plone.app.imaging.traverse.ImageTraverser is used
-#    def __bobo_traverse__(self, REQUEST, name):
-#        """Transparent access to image scales
-#        """
-#        if name.startswith('image'):
-#            field = self.getField('image')
-#            image = None
-#            if name == 'image':
-#                image = field.getScale(self)
-#            else:
-#                scalename = name[len('image_'):]
-#                if scalename in field.getAvailableSizes(self):
-#                    image = field.getScale(self, scale=scalename)
-#            if image is not None and not isinstance(image, basestring):
-#                # image might be None or '' for empty images
-#                return image
-#        return newsitem.ATNewsItem.__bobo_traverse__(self, REQUEST, name)
 atapi.registerType(FolderishNewsItem, PROJECTNAME)
