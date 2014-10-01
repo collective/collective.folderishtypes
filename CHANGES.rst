@@ -4,14 +4,17 @@ Changes
 2.0 (unreleased)
 ----------------
 
-- Dexterity support.
-  [thet]
+- Add ISelectableConstrainTypes to behaviors of Dexterity folderish types.
+  [agitator]
 
 - Add content listing viewlet.
   [agitator]
 
 - Included profile with condition on p.a.contenttypes.
   [agitator]
+
+- Dexterity support.
+  [thet]
 
 
 1.9 (unreleased)
