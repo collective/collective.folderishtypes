@@ -1,4 +1,5 @@
 from Products.CMFCore import utils
+from Products.CMFCore.permissions import setDefaultRoles
 from collective.folderishtypes import PROJECTNAME
 
 try:
@@ -8,15 +9,22 @@ except ImportError:
     from Products.Archetypes import atapi
 
 ADD_PERMISSIONS = {
-    "Folderish Event":
-    "collective.folderishtypes: Add Folderish Event",
-
-    "Folderish Document":
-    "collective.folderishtypes: Add Folderish Document",
-
-    "Folderish News Item":
-    "collective.folderishtypes: Add Folderish News Item",
+    "Folderish Event": "collective.folderishtypes: Add Folderish Event",
+    "Folderish Document": "collective.folderishtypes: Add Folderish Document",
+    "Folderish News Item": "collective.folderishtypes: Add Folderish News Item"
 }
+setDefaultRoles(
+    ADD_PERMISSIONS["Folderish Event"],
+    ('Manager', 'Owner', 'Contributor', )
+)
+setDefaultRoles(
+    ADD_PERMISSIONS["Folderish Document"],
+    ('Manager', 'Owner', 'Contributor', )
+)
+setDefaultRoles(
+    ADD_PERMISSIONS["Folderish News Item"],
+    ('Manager', 'Owner', 'Contributor', )
+)
 
 
 def initialize(context):

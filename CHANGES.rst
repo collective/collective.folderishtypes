@@ -14,6 +14,13 @@ Changes
   [agitator]
 
 
+1.9 (unreleased)
+----------------
+
+- Initialize permissions and roles.
+  [thet]
+
+
 1.8 (2013-11-23)
 ----------------
 
