@@ -1,45 +1,19 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:gs="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.folderishtypes">
 
   <i18n:registerTranslations directory="locales"/>
 
-  <include package=".browser"/>
-  <include package=".dx"/>
+  <include zcml:condition="installed Products.ATContentTypes" package=".at" />
+  <include zcml:condition="installed plone.app.contenttypes" package=".dx"/>
 
-  <include
-      zcml:condition="installed plone.app.contenttypes"
-      package=".dx"/>
+  <include package=".browser"/>
+  <include file="profiles.zcml"/>
 
   <utility
       component=".vocabularies.ImageScaleVocabulary"
       name="collective.folderishtypes.ImageScaleVocabulary"/>
-    
-  <gs:registerProfile
-      name="default"
-      title="collective.folderishtypes: default"
-      directory="profiles/default"
-      description="collective.folderishtypes default profile: Installs
-                   the folderish content types in Plone."
-      provides="Products.GenericSetup.interfaces.EXTENSION"/>
-
-  <gs:registerProfile
-      name="portlets"
-      title="collective.folderishtypes: Example portlets for folderish types"
-      directory="profiles/portlets"
-      description="collective.folderishtypes portlet profile: Adds example
-                   portlets for Folderish Types."
-      provides="Products.GenericSetup.interfaces.EXTENSION"/>
-
-  <gs:registerProfile
-      name="uninstall"
-      title="collective.folderishtypes: uninstall"
-      directory="profiles/uninstall"
-      description="collective.folderishtypes uninstall profile"
-      provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
 </configure>

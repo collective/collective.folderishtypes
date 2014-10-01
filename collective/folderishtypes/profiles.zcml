@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.folderishtypes">
+    
+  <gs:registerProfile
+      name="default"
+      title="collective.folderishtypes: default"
+      directory="profiles/default"
+      description="collective.folderishtypes default profile: Installs
+                   the folderish content types in Plone."
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
+  <gs:registerProfile
+      name="portlets"
+      title="collective.folderishtypes: Example portlets for folderish types"
+      directory="profiles/portlets"
+      description="collective.folderishtypes portlet profile: Adds example
+                   portlets for Folderish Types."
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
+  <gs:registerProfile
+      name="uninstall"
+      title="collective.folderishtypes: uninstall"
+      directory="profiles/uninstall"
+      description="collective.folderishtypes uninstall profile"
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
+</configure>

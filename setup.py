@@ -26,8 +26,13 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'zope.interface',
+        'zope.schema',
+        'plone.app.imaging',
+        'zope.i18nmessageid',
     ],
     extras_require={
+        'archetypes': ['Products.ATContentTypes', ],
         'dexterity': ['plone.app.contenttypes', ],
         'migration': ['Products.contentmigration', ],
     },
