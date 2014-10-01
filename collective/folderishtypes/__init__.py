@@ -35,9 +35,9 @@ setDefaultRoles(
 def initialize(context):
     """Register content types through Archetypes with Zope and the CMF.
     """
-    from .content import folderish_event  # nopep8
-    from .content import folderish_document  # nopep8
-    from .content import folderish_newsitem  # nopep8
+    from collective.folderishtypes.content import folderish_event  # nopep8
+    from collective.folderishtypes.content import folderish_document  # nopep8
+    from collective.folderishtypes.content import folderish_newsitem  # nopep8
 
     content_types, constructors, ftis = atapi.process_types(
         atapi.listTypes(config.PROJECTNAME),

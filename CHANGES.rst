@@ -8,6 +8,11 @@ Changes
   objects.
   [thet]
 
+- Allow collective.folderishtypes to be loaded in Plone 3.x, but without the
+  browser subpackage. This can be useful for migrating content from
+  PloneArticle.
+  [thet]
+
 - Initialize permissions and roles.
   [thet]
 

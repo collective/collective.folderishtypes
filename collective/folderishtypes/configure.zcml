@@ -11,13 +11,14 @@
 
     <include package="plone.app.portlets" />
     <include file="permissions.zcml" />
-    <include package=".browser" />
+    <include zcml:condition="have plone-4" package=".browser" />
     <include zcml:condition="installed Products.contentmigration" package=".migration" />
 
     <utility
+        zcml:condition="have plone-4"
         component=".vocabularies.ImageScaleVocabulary"
         name="collective.folderishtypes.ImageScaleVocabulary"
-    />
+        />
     
     <genericsetup:registerProfile
         name="default"
@@ -26,7 +27,7 @@
         description="collective.folderishtypes default profile: Installs
                      the folderish content types in Plone."
         provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+        />
     <genericsetup:registerProfile
         name="portlets"
         title="collective.folderishtypes: Example portlets for folderish types"
@@ -34,6 +35,6 @@
         description="collective.folderishtypes portlet profile: Adds example
                      portlets for Folderish Types."
         provides="Products.GenericSetup.interfaces.EXTENSION"
-    />
+        />
 
 </configure>
