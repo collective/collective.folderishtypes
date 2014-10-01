@@ -1,3 +1,4 @@
+from DateTime import DateTime
 from Products.CMFCore.interfaces import IPropertiesTool
 from Products.CMFCore.utils import getToolByName
 from Products.PloneArticle.interfaces import IPloneArticle
@@ -8,7 +9,6 @@ from zope.component import queryUtility
 
 import transaction
 import logging
-
 
 logger = logging.getLogger('collective.folderishtypes PloneArticle migration')
 
@@ -29,6 +29,9 @@ class PloneArticleMigrator(ATItemMigrator):
             description = item.description()
             data = item.attachedFile.data
 
+            creation_date = item.CreationDate()
+            modification_date = item.ModificationDate()
+
             self.new.invokeFactory(
                 "File",
                 id_,
@@ -36,6 +39,10 @@ class PloneArticleMigrator(ATItemMigrator):
                 description=description
             )
             self.new[id_].setFile(data)
+
+            self.new.creation_date = DateTime(creation_date)
+            self.new.setModificationDate(DateTime(modification_date))
+
             logger.info(
                 'migrated file %s for %s' % (id_, self.new.absolute_url()))
 
@@ -49,6 +56,9 @@ class PloneArticleMigrator(ATItemMigrator):
             description = item.description()
             data = item.attachedImage.data
 
+            creation_date = item.CreationDate()
+            modification_date = item.ModificationDate()
+
             self.new.invokeFactory(
                 "Image",
                 id_,
@@ -56,6 +66,10 @@ class PloneArticleMigrator(ATItemMigrator):
                 description=description
             )
             self.new[id_].setImage(data)
+
+            self.new.creation_date = DateTime(creation_date)
+            self.new.setModificationDate(DateTime(modification_date))
+
             logger.info(
                 'migrated image %s for %s' % (id_, self.new.absolute_url()))
 
@@ -69,6 +83,9 @@ class PloneArticleMigrator(ATItemMigrator):
             description = item.description()
             data = item.attachedLink
 
+            creation_date = item.CreationDate()
+            modification_date = item.ModificationDate()
+
             self.new.invokeFactory(
                 "Link",
                 id_,
@@ -76,6 +93,10 @@ class PloneArticleMigrator(ATItemMigrator):
                 description=description,
                 remoteUrl=data
             )
+
+            self.new.creation_date = DateTime(creation_date)
+            self.new.setModificationDate(DateTime(modification_date))
+
             logger.info(
                 'migrated link %s for %s' % (id_, self.new.absolute_url()))
 
