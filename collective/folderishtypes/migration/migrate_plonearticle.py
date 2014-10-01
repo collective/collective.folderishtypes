@@ -40,8 +40,8 @@ class PloneArticleMigrator(ATItemMigrator):
             )
             self.new[id_].setFile(data)
 
-            self.new.creation_date = DateTime(creation_date)
-            self.new.setModificationDate(DateTime(modification_date))
+            self.new[id_].creation_date = DateTime(creation_date)
+            self.new[id_].setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated file %s for %s' % (id_, self.new.absolute_url()))
@@ -67,8 +67,8 @@ class PloneArticleMigrator(ATItemMigrator):
             )
             self.new[id_].setImage(data)
 
-            self.new.creation_date = DateTime(creation_date)
-            self.new.setModificationDate(DateTime(modification_date))
+            self.new[id_].creation_date = DateTime(creation_date)
+            self.new[id_].setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated image %s for %s' % (id_, self.new.absolute_url()))
@@ -94,8 +94,8 @@ class PloneArticleMigrator(ATItemMigrator):
                 remoteUrl=data
             )
 
-            self.new.creation_date = DateTime(creation_date)
-            self.new.setModificationDate(DateTime(modification_date))
+            self.new[id_].creation_date = DateTime(creation_date)
+            self.new[id_].setModificationDate(DateTime(modification_date))
 
             logger.info(
                 'migrated link %s for %s' % (id_, self.new.absolute_url()))
