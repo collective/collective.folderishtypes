@@ -5,13 +5,8 @@
            i18n_domain="collective.folderishtypes">
 
   <include package="plone.app.contenttypes"/>
-
-  <!-- depends on p.a.c 1.2.x -->
-  <!--configure zcml:condition="installed Products.ATContentTypes">
-  <include
-      zcml:condition="installed archetypes.schemaextender"
-      package=".migration"/>
-  </configure-->
+  <include zcml:condition="installed plone.app.contenttypes.migration.migration.ATCTFolderMigrator"
+           package=".migration"/>
 
   <gs:registerProfile
       name="default"

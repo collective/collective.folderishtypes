@@ -1,4 +1,28 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-           xmlns:i18n="http://namespaces.zope.org/i18n"
-           i18n_domain="collective.folderishtypes">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.folderishtypes">
+
+  <configure zcml:condition="installed Products.ATContentTypes">
+    <genericsetup:upgradeStep
+        title="Folderish Document: AT to DX migration"
+        description=""
+        handler=".migrate_atdx_folderishtypes.migrate_folderishdocuments"
+        profile="collective.folderishtypes.dx:default"
+        />
+    <genericsetup:upgradeStep
+        title="Folderish News Item: AT to DX migration"
+        description=""
+        handler=".migrate_atdx_folderishtypes.migrate_folderishnewsitems"
+        profile="collective.folderishtypes.dx:default"
+        />
+    <genericsetup:upgradeStep
+        title="Folderish Event: AT to DX migration"
+        description=""
+        handler=".migrate_atdx_folderishtypes.migrate_folderishevents"
+        profile="collective.folderishtypes.dx:default"
+        />        
+  </configure>
+
 </configure>
