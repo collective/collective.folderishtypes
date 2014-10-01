@@ -8,6 +8,7 @@
     <five:registerPackage package="." initialize=".initialize"/>
     <include package=".browser"/>
     <include file="permissions.zcml"/>
+    <include zcml:condition="installed Products.contentmigration" package=".migration" />
 
     <gs:registerProfile
         name="default"

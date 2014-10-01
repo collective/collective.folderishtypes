@@ -10,7 +10,6 @@
 
   <include package=".browser"/>
   <include package=".dx"/>
-  <include zcml:condition="installed Products.contentmigration" package=".migration" />
 
   <include
       zcml:condition="installed plone.app.contenttypes"
