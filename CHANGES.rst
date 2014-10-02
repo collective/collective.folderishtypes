@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.9 (unreleased)
+1.9 (2014-10-02)
 ----------------
 
 - Add migration step for Products.PloneArticle objects to Foldersh Document
