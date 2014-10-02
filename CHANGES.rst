@@ -10,21 +10,14 @@ Changes
 - Add content listing viewlet.
   [agitator]
 
-- Included profile with condition on p.a.contenttypes.
-  [agitator]
+- Add migration step for Products.PloneArticle objects to Archetypes based
+  foldersh document objects.
+  [thet]
+
+- Initialize permissions and roles for Archetypes foldersh types.
+  [thet]
 
 - Dexterity support.
-  [thet]
-
-
-1.9 (unreleased)
-----------------
-
-- Add migration step for Products.PloneArticle objects to Foldersh Document
-  objects.
-  [thet]
-
-- Initialize permissions and roles.
   [thet]
 
 
