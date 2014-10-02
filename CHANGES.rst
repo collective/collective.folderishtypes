@@ -1,8 +1,8 @@
 Changes
 =======
 
-2.0 (unreleased)
-----------------
+2.0b1 (2014-10-02)
+------------------
 
 - Add ISelectableConstrainTypes to behaviors of Dexterity folderish types.
   [agitator]
