@@ -12,12 +12,33 @@ import logging
 
 logger = logging.getLogger('collective.folderishtypes PloneArticle migration')
 
+try:
+    from collective.contentleadimage.config import IMAGE_FIELD_NAME
+except ImportError:
+    IMAGE_FIELD_NAME = None
+
 
 class PloneArticleMigrator(ATItemMigrator):
     src_portal_type = 'PloneArticle'
     src_meta_type = 'PloneArticle'
     dst_portal_type = 'Folderish Document'
     dst_meta_type = 'FolderishDocument'
+
+    def migrate_various(self):
+
+        if IMAGE_FIELD_NAME:
+            # Migrate contentleadimage
+            new_img_field = self.new.getField(IMAGE_FIELD_NAME)
+            if new_img_field:
+                # Else: forgot to configure the type for it? or not supposed to
+                # hold contentlead images
+                img_field = self.old.getField(IMAGE_FIELD_NAME)
+                img = img_field.get(self.old)
+                new_img_field.set(self.new, img, mimetype=img.content_type)
+                logger.info('migrated contentleadimage for %s'
+                            % self.new.absolute_url())
+
+        logger.info('migrated PloneArticle %s' % self.new.absolute_url())
 
     def migrate_files(self):
         """Migrate files from PloneArticle to file contents within the
