@@ -14,8 +14,10 @@ logger = logging.getLogger('collective.folderishtypes PloneArticle migration')
 
 try:
     from collective.contentleadimage.config import IMAGE_FIELD_NAME
+    from collective.contentleadimage.config import IMAGE_CAPTION_FIELD_NAME
 except ImportError:
     IMAGE_FIELD_NAME = None
+    IMAGE_CAPTION_FIELD_NAME = None
 
 
 class PloneArticleMigrator(ATItemMigrator):
@@ -35,6 +37,12 @@ class PloneArticleMigrator(ATItemMigrator):
                 img_field = self.old.getField(IMAGE_FIELD_NAME)
                 img = img_field.get(self.old)
                 new_img_field.set(self.new, img, mimetype=img.content_type)
+
+                cap_field = self.old.getField(IMAGE_CAPTION_FIELD_NAME)
+                cap = cap_field.get(self.old)
+                new_cap_field = self.new.getField(IMAGE_CAPTION_FIELD_NAME)
+                new_cap_field.set(self.new, cap)
+
                 logger.info('migrated contentleadimage for %s'
                             % self.new.absolute_url())
 
