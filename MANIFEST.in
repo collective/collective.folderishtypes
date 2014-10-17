@@ -1,4 +1,4 @@
-include *.txt *.rst docs/*.txt docs/*.rst docs/*.GPL
-recursive-include collective *.css *.js *.pdf *.png *.po *.pot *.pt *.txt *.xml *.zcml
-global-include *.mo
-global-exclude *.pyc *pyo *~
+include *.rst
+recursive-include docs *
+recursive-include src *
+recursive-exclude src *.pyc *.pyo

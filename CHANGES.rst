@@ -1,10 +1,11 @@
 Changes
 =======
 
-2.0 (unreleased)
-----------------
+2.0b2 (2014-10-17)
+------------------
 
-- Nothing changed yet.
+- Fix broken release
+  [rnix]
 
 
 2.0b1 (2014-10-02)
