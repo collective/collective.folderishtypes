@@ -1,7 +1,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-version = '2.0b2'
+version = '2.0.dev0'
 title = 'collective.folderishtypes'
 description = "Folderish News Item, Document and Event as replacement for default types."  # noqa
 long_desc = open("README.rst").read() + "\n" + open("CHANGES.rst").read()
