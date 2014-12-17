@@ -4,7 +4,9 @@ Changes
 2.0 (unreleased)
 ----------------
 
-- no changes
+- Better PloneArticle migration: Set content_type and filename for files and
+  images. Plus: migrate contentleadimage, if available.
+  [thet]
 
 
 2.0b2 (2014-10-17)
