@@ -4,7 +4,9 @@ Changes
 1.10 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Better PloneArticle migration: Set content_type and filename for files and
+  images. Plus: migrate contentleadimage, if available.
+  [thet]
 
 
 1.9 (2014-10-02)

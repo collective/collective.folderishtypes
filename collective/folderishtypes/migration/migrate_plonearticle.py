@@ -36,15 +36,16 @@ class PloneArticleMigrator(ATItemMigrator):
                 # hold contentlead images
                 img_field = self.old.getField(IMAGE_FIELD_NAME)
                 img = img_field.get(self.old)
-                new_img_field.set(self.new, img, mimetype=img.content_type)
+                if img:
+                    new_img_field.set(self.new, img, mimetype=img.content_type)
 
-                cap_field = self.old.getField(IMAGE_CAPTION_FIELD_NAME)
-                cap = cap_field.get(self.old)
-                new_cap_field = self.new.getField(IMAGE_CAPTION_FIELD_NAME)
-                new_cap_field.set(self.new, cap)
+                    cap_field = self.old.getField(IMAGE_CAPTION_FIELD_NAME)
+                    cap = cap_field.get(self.old)
+                    new_cap_field = self.new.getField(IMAGE_CAPTION_FIELD_NAME)
+                    new_cap_field.set(self.new, cap)
 
-                logger.info('migrated contentleadimage for %s'
-                            % self.new.absolute_url())
+                    logger.info('migrated contentleadimage for %s'
+                                % self.new.absolute_url())
 
         logger.info('migrated PloneArticle %s' % self.new.absolute_url())
 
@@ -73,6 +74,8 @@ class PloneArticleMigrator(ATItemMigrator):
             )
             item_new = self.new.files[id_]
             item_new.setFile(data)
+            item_new.setFilename(item.attachedFile.filename)
+            item_new.setContentType(item.attachedFile.content_type)
 
             item_new.creation_date = DateTime(creation_date)
             item_new.setModificationDate(DateTime(modification_date))
@@ -105,6 +108,8 @@ class PloneArticleMigrator(ATItemMigrator):
             )
             item_new = self.new.images[id_]
             item_new.setImage(data)
+            item_new.setFilename(item.attachedImage.filename)
+            item_new.setContentType(item.attachedImage.content_type)
 
             item_new.creation_date = DateTime(creation_date)
             item_new.setModificationDate(DateTime(modification_date))
