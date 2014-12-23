@@ -56,7 +56,7 @@ class PloneArticleMigrator(ATItemMigrator):
         for item in self.old.getFiles():
 
             if 'files' not in self.new.contentIds():
-                self.new.invokeFactory('Folder', 'files', 'files')
+                self.new.invokeFactory('Folder', 'files', title='Files')
 
             id_ = item.id
             title = item.title
@@ -90,7 +90,7 @@ class PloneArticleMigrator(ATItemMigrator):
         for item in self.old.getImages():
 
             if 'images' not in self.new.contentIds():
-                self.new.invokeFactory('Folder', 'images', 'images')
+                self.new.invokeFactory('Folder', 'images', title='Images')
 
             id_ = item.id
             title = item.title
@@ -124,7 +124,7 @@ class PloneArticleMigrator(ATItemMigrator):
         for item in self.old.getLinks():
 
             if 'links' not in self.new.contentIds():
-                self.new.invokeFactory('Folder', 'links', 'links')
+                self.new.invokeFactory('Folder', 'links', title='Links')
 
             id_ = item.id
             title = item.title
