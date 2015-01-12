@@ -15,15 +15,15 @@ ADD_PERMISSIONS = {
 }
 setDefaultRoles(
     ADD_PERMISSIONS["Folderish Event"],
-    ('Manager', 'Owner', 'Contributor', )
+    ('Manager', 'Owner', 'Site Administrator', 'Contributor', )
 )
 setDefaultRoles(
     ADD_PERMISSIONS["Folderish Document"],
-    ('Manager', 'Owner', 'Contributor', )
+    ('Manager', 'Owner', 'Site Administrator', 'Contributor', )
 )
 setDefaultRoles(
     ADD_PERMISSIONS["Folderish News Item"],
-    ('Manager', 'Owner', 'Contributor', )
+    ('Manager', 'Owner', 'Site Administrator', 'Contributor', )
 )
 
 

@@ -3,16 +3,19 @@
   <permissions>
     <permission name="collective.folderishtypes: Add Folderish Document" acquire="True">
       <role name="Manager"/>
+      <role name="Site Administrator"/>
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
     <permission name="collective.folderishtypes: Add Folderish Event" acquire="True">
       <role name="Manager"/>
+      <role name="Site Administrator"/>
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
     <permission name="collective.folderishtypes: Add Folderish News Item" acquire="True">
       <role name="Manager"/>
+      <role name="Site Administrator"/>
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
