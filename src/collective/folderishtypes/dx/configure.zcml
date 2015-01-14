@@ -40,5 +40,11 @@
       description="This provides Plones default types"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+    <gs:registerProfile
+        name="uninstall"
+        title="collective.folderishtypes: Dexterity configuration uninstall"
+        directory="profiles/uninstall"
+        description="Remove collective.folderishtypes Dexterity configuration."
+        provides="Products.GenericSetup.interfaces.EXTENSION"/>
 
  </configure>

@@ -2,9 +2,9 @@
 <object>
  <resourcetypes>
   <containsobjects purge="False">
-   <element value="Event"/>
-   <element value="Document"/>
-   <element value="News Item"/>
+   <element remove="True" value="Event"/>
+   <element remove="True" value="Document"/>
+   <element remove="True" value="News Item"/>
   </containsobjects>
  </resourcetypes>
 </object>

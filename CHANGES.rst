@@ -23,6 +23,9 @@ Changes
   images. Plus: migrate contentleadimage, if available.
   [thet]
 
+- Update unsintall profiles.
+  [thet]
+
 
 2.0b2 (2014-10-17)
 ------------------
