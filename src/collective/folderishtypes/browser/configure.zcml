@@ -29,6 +29,7 @@
       class=".viewlets.ListingViewlet"
       for="collective.folderishtypes.interfaces.IFolderishType"
       permission="zope2.View"
+      layer="collective.folderishtypes.interfaces.IThemeSpecific"
       />
 
 

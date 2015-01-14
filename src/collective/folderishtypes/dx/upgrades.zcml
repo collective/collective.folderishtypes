@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.folderishtypes">
+
+    <gs:upgradeStep
+        source="1"
+        destination="2"
+        profile="collective.folderishtypes.dx:default"
+        title="Upgrade 1 to 2: Add browserlayer"
+        description=""
+        handler=".upgrades.import_browserlayer"
+        />
+
+</configure>

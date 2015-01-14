@@ -12,7 +12,7 @@
   <!-- custom add view for redirection to parent -->
   <adapter
       for="Products.CMFCore.interfaces.IFolderish
-           collective.folderishtypes.interfaces.IThemeSpecific
+           collective.folderishtypes.dx.interfaces.IThemeSpecific
            plone.dexterity.interfaces.IDexterityFTI"
       provides="zope.publisher.interfaces.browser.IBrowserPage"
       factory=".browserforms.AddView"
@@ -30,7 +30,7 @@
       name="edit"
       class=".browserforms.EditView"
       permission="cmf.ModifyPortalContent"
-      layer="collective.folderishtypes.interfaces.IThemeSpecific"
+      layer="collective.folderishtypes.dx.interfaces.IThemeSpecific"
       />
 
   <gs:registerProfile

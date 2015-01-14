@@ -8,6 +8,7 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes import atapi
 
+
 ADD_PERMISSIONS = {
     "Folderish Event": "collective.folderishtypes: Add Folderish Event",
     "Folderish Document": "collective.folderishtypes: Add Folderish Document",

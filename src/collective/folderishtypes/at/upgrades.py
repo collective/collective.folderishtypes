@@ -12,3 +12,10 @@ def import_skins(context):
         'profile-collective.folderishtypes.at:default',
         'skins',
     )
+
+
+def import_browserlayer(context):
+    context.runImportStepFromProfile(
+        'profile-collective.folderishtypes.at:default',
+        'browserlayer',
+    )

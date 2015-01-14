@@ -10,7 +10,9 @@ Changes
   types.
   [thet]
 
-- Add a browserlayer including upgrade step.
+- Add a browserlayer for collective.folderishtypes including the .at and .dx
+  sub packages together with upgrade steps. Bind relevant browser views to
+  these browser layers.
   [thet]
 
 - Allow "Site Administrator" to add ATContentTypes based Folderish Content

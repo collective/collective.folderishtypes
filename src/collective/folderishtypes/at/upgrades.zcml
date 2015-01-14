@@ -17,6 +17,11 @@
           description="Add skin layer for redirection to the parent folder after editing."
           handler=".upgrades.import_skins"
           />
+      <gs:upgradeStep
+          title="Upgrade 1 to 2: Add browser layer"
+          description=""
+          handler=".upgrades.import_browserlayer"
+          />
     </gs:upgradeSteps>
 
 </configure>

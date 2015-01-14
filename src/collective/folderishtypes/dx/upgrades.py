@@ -2,6 +2,6 @@
 
 def import_browserlayer(context):
     context.runImportStepFromProfile(
-        'profile-collective.folderishtypes:default',
+        'profile-collective.folderishtypes.dx:default',
         'browserlayer',
     )

@@ -8,6 +8,7 @@
   <browser:resource
       name="folderishtypes.css"
       file="folderishtypes.css"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
 
   <!-- enable plone.app.discussion for IFolderishTypes -->
@@ -15,9 +16,9 @@
       zcml:condition="installed plone.app.discussion"
       name="conversation_view"
       for="collective.folderishtypes.interfaces.IFolderishType"
-      layer="plone.app.discussion.interfaces.IDiscussionLayer"
       class=".adapters.FolderishTypesConversationView"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
 
   <browser:page
@@ -25,20 +26,22 @@
       name="folder_listing"
       template="folder_listing.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
   <browser:page
       for="Products.ATContentTypes.interfaces.topic.IATTopic"
       name="folder_listing"
       template="folder_listing.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
-
   <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
   <browser:page
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       name="folder_listing"
       template="folder_listing.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
 
   <browser:page
@@ -46,12 +49,14 @@
       name="folder_summary_view"
       template="folder_summary_view.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
   <browser:page
       for="Products.ATContentTypes.interfaces.topic.IATTopic"
       name="folder_summary_view"
       template="folder_summary_view.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
   <!-- Overriding skin's template for IPloneSiteRoot seems not to work... -->
   <browser:page
@@ -59,6 +64,7 @@
       name="folder_summary_view"
       template="folder_summary_view.pt"
       permission="zope2.View"
+      layer="collective.folderishtypes.at.interfaces.IThemeSpecific"
       />
 
 </configure>

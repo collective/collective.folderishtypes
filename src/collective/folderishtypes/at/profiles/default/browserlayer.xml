@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="collective.folderishtypes.at.browserlayer"
+      interface="collective.folderishtypes.at.interfaces.IThemeSpecific"
+      />
+</layers>
