@@ -4,6 +4,9 @@ Changes
 2.0 (unreleased)
 ----------------
 
+- Add a browserlayer including upgrade step.
+  [thet]
+
 - Allow "Site Administrator" to add ATContentTypes based Folderish Content
   Types.
   [thet]

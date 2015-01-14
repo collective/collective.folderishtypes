@@ -11,6 +11,7 @@
 
   <include package=".browser"/>
   <include file="profiles.zcml"/>
+  <include file="upgrades.zcml"/>
 
   <utility
       component=".vocabularies.ImageScaleVocabulary"

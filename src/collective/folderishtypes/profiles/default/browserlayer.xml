@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="collective.folderishtypes_layer"
+      interface="collective.folderishtypes.interfaces.IThemeSpecific"
+      />
+</layers>
