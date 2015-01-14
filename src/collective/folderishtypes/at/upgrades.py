@@ -5,3 +5,10 @@ def import_rolemap(context):
         'profile-collective.folderishtypes.at:default',
         'rolemap',
     )
+
+
+def import_skins(context):
+    context.runImportStepFromProfile(
+        'profile-collective.folderishtypes.at:default',
+        'skins',
+    )

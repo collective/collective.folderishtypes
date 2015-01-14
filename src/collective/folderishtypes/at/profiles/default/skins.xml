@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+  <object name="folderishtypes"
+      meta_type="Filesystem Directory View"
+      directory="collective.folderishtypes.at:skins/folderishtypes"/>
+  <skin-path name="*">
+    <layer name="folderishtypes" insert-before="archetypes"/>
+  </skin-path>
+</object>
