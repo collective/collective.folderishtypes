@@ -4,6 +4,12 @@ Changes
 2.0 (unreleased)
 ----------------
 
+- After adding or editing, return to the parent folder. This avoids confusing
+  behavior of creating nested content structures, while one might add multiple
+  content items to one folder. For consistency reasons, this is done for all
+  types.
+  [thet]
+
 - Add a browserlayer including upgrade step.
   [thet]
 
