@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.folderishtypes">
+
+    <gs:upgradeStep
+        source="1"
+        destination="2"
+        profile="collective.folderishtypes.at:default"
+        title="Upgrade 1 to 2: Import Rolemap"
+        description="Allow site admin to add Archetypes based Folderish Types."
+        handler=".upgrades.import_rolemap"
+        />
+
+</configure>

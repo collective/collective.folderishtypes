@@ -4,7 +4,8 @@ Changes
 2.0 (unreleased)
 ----------------
 
-- Allow "Site Administrator" to add Folderish Content Types.
+- Allow "Site Administrator" to add ATContentTypes based Folderish Content
+  Types.
   [thet]
 
 - Better PloneArticle migration: Set content_type and filename for files and
