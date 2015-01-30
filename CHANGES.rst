@@ -4,10 +4,12 @@ Changes
 2.0 (unreleased)
 ----------------
 
-- After adding or editing, return to the parent folder. This avoids confusing
-  behavior of creating nested content structures, while one might add multiple
-  content items to one folder. For consistency reasons, this is done for all
-  types.
+- Provide a ``redirectparent.zcml`` file. When loading it the user is
+  redirected to the parent folder after adding or editing. This avoids
+  confusing behavior of creating nested content structures, while one might add
+  multiple content items to one folder. For consistency reasons, this is done
+  for all types.
+  For Archetypes, this behavior is enabled by default.
   [thet]
 
 - Add a browserlayer for collective.folderishtypes including the .at and .dx

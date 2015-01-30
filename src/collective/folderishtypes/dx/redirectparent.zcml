@@ -1,0 +1,30 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="collective.folderishtypes">
+           
+  <!-- custom add view for redirection to parent -->
+  <adapter
+      for="Products.CMFCore.interfaces.IFolderish
+           collective.folderishtypes.dx.interfaces.IThemeSpecific
+           plone.dexterity.interfaces.IDexterityFTI"
+      provides="zope.publisher.interfaces.browser.IBrowserPage"
+      factory=".redirectparent.AddView"
+      />
+  <class class=".redirectparent.AddView">
+    <require
+        permission="cmf.AddPortalContent"
+        interface="zope.publisher.interfaces.browser.IBrowserPage"
+        />
+  </class>
+
+  <!-- custom add view for redirection to parent -->
+  <browser:page
+      for="plone.dexterity.interfaces.IDexterityContent"
+      name="edit"
+      class=".redirectparent.EditView"
+      permission="cmf.ModifyPortalContent"
+      layer="collective.folderishtypes.dx.interfaces.IThemeSpecific"
+      />
+
+</configure>
