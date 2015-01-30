@@ -15,9 +15,11 @@
     <span class="portletTopRight"></span>
   </dt>
 
-  <dd class="portletItem folderishtypes-folderlisting"
-    tal:define="plone_view context/@@plone;">
-    <metal:listing use-macro="context/folder_listing/macros/listing" /> 
+  <dd class="portletItem folderishtypes-folderlisting">
+    <tal:block define="view nocall:context/folder_listing; listing_macro view/macros/listing">
+      <metal:use_macro use-macro="listing_macro"/>
+    </tal:block>
   </dd>
 </dl>
 </html>
+

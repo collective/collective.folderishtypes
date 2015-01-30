@@ -4,6 +4,9 @@ Changes
 2.0 (unreleased)
 ----------------
 
+- Plone 5 + 4 safe call of the ``@@folder_listing`` ``listing_macro``.
+  [thet]
+
 - Provide a ``redirectparent.zcml`` file. When loading it the user is
   redirected to the parent folder after adding or editing. This avoids
   confusing behavior of creating nested content structures, while one might add
