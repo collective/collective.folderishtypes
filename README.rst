@@ -23,30 +23,14 @@ Alexander Limi also wished folderish content back in 2008:
 "#10: Content re-use is overrated — people like folderish"
 http://limi.net/articles/18-things-i-wish-were-true-about-plone/
 
-.. note::
-  To use this package, explicitly include the ``at`` respectively the ``dx``
-  subpackage. They are not included by default, so that no unnecessary zcml
-  registrations are loaded. E.g. there are some browser pages used for the
-  Archetypes version, which might not helpful for the Dexterity version.
+To use ``collective.folderishtypes`` with Archetypes, depend on the
+``dexterity`` ``extras_require`` in setup.py or buildout like so::
 
-Include the Archetypes version Like so::
+    collective.folderishtypes [archetypes]
 
-  <include package="collective.folderishtypes"/>
-  <include package="collective.folderishtypes.at"/>
+For the dexterity version, like so::
 
-And the Dexterity version like so::
-
-  <include package="collective.folderishtypes"/>
-  <include package="collective.folderishtypes.dx"/>
-
-
-How To create own content types based on collective.folderishtypes
-==================================================================
-
-You can subclass the content classes from ``collective.folderishtypes.content``
-and use it's schema to create own content types based on
-``collective.folderishtypes``, as you would do to subclass for any other
-Archetypes based content type.
+    collective.folderishtypes [dexterity]
 
 
 How to migrate Products.PloneArticle documents to Folderish Document
@@ -86,7 +70,7 @@ TODO
 Tested with
 ===========
 
-Plone 4+
+Plone 4, Plone 5
 
 
 Contributors
