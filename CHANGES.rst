@@ -1,7 +1,7 @@
 Changes
 =======
 
-2.0 (unreleased)
+2.0 (2015-03-04)
 ----------------
 
 - Plone 5 + 4 safe call of the ``@@folder_listing`` ``listing_macro``.
