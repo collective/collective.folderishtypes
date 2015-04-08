@@ -1,7 +1,7 @@
 Changes
 =======
 
-2.0.1 (unreleased)
+2.0.1 (2015-04-08)
 ------------------
 
 - Fix redirection to parent context after editing for Archetypes. We cannot
