@@ -1,10 +1,12 @@
 Changes
 =======
 
-2.1 (unreleased)
-----------------
+2.0.1 (unreleased)
+------------------
 
-- Nothing changed yet.
+- Fix redirection to parent context after editing for Archetypes. We cannot
+  import something from Acquisition in a Filesystem script.
+  [thet]
 
 
 2.0 (2015-03-04)

@@ -13,7 +13,6 @@
 # From: http://plonenotes.blogspot.co.at/2013/03/plone-redirection-after-archetypes.html
 #       http://www.upfrontsystems.co.za/Members/francois/frankthetank/archetypes-redirection-after-creation 
 
-from Acquisition import aq_parent
 from Products.Archetypes import PloneMessageFactory as _
 from Products.Archetypes.utils import addStatusMessage
 
@@ -29,5 +28,5 @@ else:
     message = _(u'Changes saved.')
     addStatusMessage(request, message)
     state.setNextAction(
-        'redirect_to:string:%s' % (aq_parent(context).absolute_url()))
+        'redirect_to:string:%s' % (context.aq_parent.absolute_url()))
     return state.set(status='success')
