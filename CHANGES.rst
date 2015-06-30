@@ -1,8 +1,8 @@
 Changes
 =======
 
-2.1 (unreleased)
-----------------
+2.0.2 (2015-06-30)
+------------------
 
 - Configure folderish types to use the ``plone.content.itemView`` caching
   ruleset instead the folderView one.
