@@ -12,6 +12,7 @@
   <include package=".browser"/>
   <include file="profiles.zcml"/>
   <include file="upgrades.zcml"/>
+  <include file="caching.zcml" zcml:condition="installed z3c.caching"/>
 
   <utility
       component=".vocabularies.ImageScaleVocabulary"
