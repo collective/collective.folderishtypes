@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from collective.folderishtypes.interfaces import IFolderishDocument
 from collective.folderishtypes.interfaces import IFolderishEvent
 from collective.folderishtypes.interfaces import IFolderishNewsItem

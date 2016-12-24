@@ -1,9 +1,11 @@
-from zope.interface import directlyProvides
+# -*- coding: utf-8 -*-
+from plone.app.imaging.utils import getAllowedSizes
+from zope.interface import provider
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
-from plone.app.imaging.utils import getAllowedSizes
 
 
+@provider(IVocabularyFactory)
 def ImageScaleVocabulary(context):
     allowed_sizes = getAllowedSizes()
     items = [
@@ -11,4 +13,3 @@ def ImageScaleVocabulary(context):
         for key, value in allowed_sizes.items() if allowed_sizes
     ]
     return SimpleVocabulary.fromItems(items)
-directlyProvides(ImageScaleVocabulary, IVocabularyFactory)

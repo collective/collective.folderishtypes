@@ -1,12 +1,14 @@
-from Products.ATContentTypes.content import document
-from Products.ATContentTypes.content import folder
-from Products.ATContentTypes.content import newsitem
-from Products.ATContentTypes.content import schemata
+# -*- coding: utf-8 -*-
 from collective.folderishtypes import PROJECTNAME
 from collective.folderishtypes.interfaces import IFolderishDocument
 from collective.folderishtypes.interfaces import IFolderishEvent
 from collective.folderishtypes.interfaces import IFolderishNewsItem
-from zope.interface import implements
+from Products.ATContentTypes.content import document
+from Products.ATContentTypes.content import folder
+from Products.ATContentTypes.content import newsitem
+from Products.ATContentTypes.content import schemata
+from zope.interface import implementer
+
 
 try:
     from Products.LinguaPlone import public as atapi
@@ -44,12 +46,14 @@ schemata.finalizeATCTSchema(type_schema,
                             moveDiscussion=False)
 
 
+@implementer(IFolderishDocument)
 class FolderishDocument(folder.ATFolder, document.ATDocument):
-    implements(IFolderishDocument)
 
     portal_type = 'Folderish Document'
     _at_rename_after_creation = True
     schema = type_schema
+
+
 atapi.registerType(FolderishDocument, PROJECTNAME)
 
 
@@ -60,16 +64,17 @@ type_schema = folder_schema + event.ATEventSchema.copy()
 schemata.finalizeATCTSchema(type_schema,
                             moveDiscussion=False)
 type_schema.changeSchemataForField('location', 'default')
-type_schema.moveField('location', before='attendees')  # Move location back to
-                                                       # main schemata
+type_schema.moveField('location', before='attendees')  # Move location back to main schemata  # noqa
 
 
+@implementer(IFolderishEvent)
 class FolderishEvent(folder.ATFolder, event.ATEvent):
-    implements(IFolderishEvent)
 
     portal_type = 'Folderish Event'
     _at_rename_after_creation = True
     schema = type_schema
+
+
 atapi.registerType(FolderishEvent, PROJECTNAME)
 
 
@@ -82,10 +87,12 @@ schemata.finalizeATCTSchema(type_schema,
                             moveDiscussion=False)
 
 
+@implementer(IFolderishNewsItem)
 class FolderishNewsItem(folder.ATFolder, newsitem.ATNewsItem):
-    implements(IFolderishNewsItem)
 
     portal_type = 'Folderish News Item'
     _at_rename_after_creation = True
     schema = type_schema
+
+
 atapi.registerType(FolderishNewsItem, PROJECTNAME)

@@ -1,14 +1,15 @@
-from Acquisition import aq_inner, aq_parent
+# -*- coding: utf-8 -*-
+from Acquisition import aq_inner
+from Acquisition import aq_parent
+from collective.folderishtypes import MsgFact as _
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
-from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.interfaces import ISiteRoot
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope import schema
 from zope.formlib import form
-from zope.interface import implements
-
-from collective.folderishtypes import MsgFact as _
+from zope.interface import implementer
 
 
 DEFAULT_ALLOWED_TYPES = (
@@ -89,8 +90,8 @@ class Renderer(base.Renderer):
         return brains
 
 
+@implementer(IContextualContentsPortlet)
 class Assignment(base.Assignment):
-    implements(IContextualContentsPortlet)
 
     def __init__(
             self,

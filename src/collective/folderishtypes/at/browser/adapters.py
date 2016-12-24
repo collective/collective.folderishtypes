@@ -1,16 +1,16 @@
+# -*- coding: utf-8 -*-
 from Acquisition import aq_base
 from Acquisition import aq_chain
 from Acquisition import aq_inner
+from collective.folderishtypes.interfaces import IFolderishType
+from plone.app.discussion.browser.conversation import ConversationView
+from plone.app.discussion.interfaces import IDiscussionSettings
+from plone.registry.interfaces import IRegistry
 from Products.CMFCore.interfaces import IFolderish
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import INonStructuralFolder
 from Products.CMFPlone.interfaces import IPloneSiteRoot
-from plone.app.discussion.browser.conversation import ConversationView
-from plone.app.discussion.interfaces import IDiscussionSettings
-from plone.registry.interfaces import IRegistry
 from zope.component import queryUtility
-
-from collective.folderishtypes.interfaces import IFolderishType
 
 
 class FolderishTypesConversationView(ConversationView):
