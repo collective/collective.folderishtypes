@@ -4,7 +4,8 @@ Changes
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Change portlets to support z3c.form and make it Plone 5 compatible (no more formlib).
+  [thet]
 
 
 2.0.2 (2015-06-30)

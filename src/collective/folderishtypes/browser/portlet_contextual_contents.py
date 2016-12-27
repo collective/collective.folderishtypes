@@ -6,10 +6,23 @@ from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
 from Products.CMFCore.interfaces import ISiteRoot
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import getFSVersionTuple
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from z3c.form import field
 from zope import schema
-from zope.formlib import form
 from zope.interface import implementer
+
+
+PLONE5 = getFSVersionTuple()[0] >= 5
+
+if PLONE5:
+    base_AddForm = base.AddForm
+    base_EditForm = base.EditForm
+else:
+    # PLONE 4 Support:
+    from plone.app.portlets.browser import z3cformhelper
+    base_AddForm = z3cformhelper.AddForm
+    base_EditForm = z3cformhelper.EditForm
 
 
 DEFAULT_ALLOWED_TYPES = (
@@ -112,8 +125,12 @@ class Assignment(base.Assignment):
         )
 
 
-class AddForm(base.AddForm):
-    form_fields = form.Fields(IContextualContentsPortlet)
+class AddForm(base_AddForm):
+    if PLONE5:
+        schema = IContextualContentsPortlet
+    else:
+        fields = field.Fields(IContextualContentsPortlet)
+
     label = _(
         u'portlet_ctxcontents_label_add',
         default=u"Add Contextual Contents Portlet."
@@ -128,8 +145,12 @@ class AddForm(base.AddForm):
         return Assignment(**data)
 
 
-class EditForm(base.EditForm):
-    form_fields = form.Fields(IContextualContentsPortlet)
+class EditForm(base_EditForm):
+    if PLONE5:
+        schema = IContextualContentsPortlet
+    else:
+        fields = field.Fields(IContextualContentsPortlet)
+
     label = _(
         u'portlet_ctxcontents_label_edit',
         default=u"Edit Contextual Contents Portlet."
