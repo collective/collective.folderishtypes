@@ -1,14 +1,16 @@
+# -*- coding: utf-8 -*-
 from DateTime import DateTime
 from Products.CMFCore.interfaces import IPropertiesTool
 from Products.CMFCore.utils import getToolByName
-from Products.PloneArticle.interfaces import IPloneArticle
 from Products.contentmigration.archetypes import ATItemMigrator
 from Products.contentmigration.walker import CustomQueryWalker
+from Products.PloneArticle.interfaces import IPloneArticle
 from transaction import savepoint
 from zope.component import queryUtility
 
-import transaction
 import logging
+import transaction
+
 
 logger = logging.getLogger('collective.folderishtypes PloneArticle migration')
 

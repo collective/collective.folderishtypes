@@ -1,6 +1,9 @@
-import logging
-from Products.CMFCore.utils import getToolByName
+# -*- coding: utf-8 -*-
 from collective.folderishtypes.at.content import FolderishEvent
+from Products.CMFCore.utils import getToolByName
+
+import logging
+
 
 logger = logging.getLogger('collective.folderishtypes')
 

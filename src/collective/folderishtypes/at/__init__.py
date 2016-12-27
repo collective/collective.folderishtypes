@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+from collective.folderishtypes import PROJECTNAME
 from Products.CMFCore import utils
 from Products.CMFCore.permissions import setDefaultRoles
-from collective.folderishtypes import PROJECTNAME
+
 
 try:
     from Products.LinguaPlone import public as atapi
@@ -31,7 +33,7 @@ setDefaultRoles(
 def initialize(context):
     """Register content types through Archetypes with Zope and the CMF.
     """
-    from collective.folderishtypes.at import content  # nopep8
+    from collective.folderishtypes.at import content  # noqa
 
     content_types, constructors, ftis = atapi.process_types(
         atapi.listTypes(PROJECTNAME), PROJECTNAME

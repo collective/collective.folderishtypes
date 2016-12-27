@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*-
 from collective.folderishtypes.interfaces import IFolderishDocument
 from collective.folderishtypes.interfaces import IFolderishEvent
 from collective.folderishtypes.interfaces import IFolderishNewsItem
 from plone.app.contenttypes.migration.migration import ATCTFolderMigrator
 from plone.app.contenttypes.migration.migration import DocumentMigrator
 from plone.app.contenttypes.migration.migration import EventMigrator
-from plone.app.contenttypes.migration.migration import NewsItemMigrator
 from plone.app.contenttypes.migration.migration import migrate
+from plone.app.contenttypes.migration.migration import NewsItemMigrator
 from plone.app.contenttypes.migration.utils import ATCT_LIST
 
 

@@ -1,22 +1,20 @@
-from zope.formlib import form
-from zope.interface import implements
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.portlets.interfaces import IPortletDataProvider
-from plone.app.portlets.portlets import base
-
+# -*- coding: utf-8 -*-
 from Acquisition import aq_inner
-from zope.component import getMultiAdapter
-
 from collective.folderishtypes import MsgFact as _
 from collective.folderishtypes.interfaces import IFolderishType
+from plone.app.portlets.portlets import base
+from plone.portlets.interfaces import IPortletDataProvider
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.component import getMultiAdapter
+from zope.interface import implementer
 
 
 class IListingPortlet(IPortletDataProvider):
     pass
 
 
+@implementer(IListingPortlet)
 class Assignment(base.Assignment):
-    implements(IListingPortlet)
 
     @property
     def title(self):
@@ -27,7 +25,6 @@ class Assignment(base.Assignment):
 
 
 class AddForm(base.NullAddForm):
-    form_fields = form.Fields(IListingPortlet)
     label = _(u"listingportlet_label_add", u"Add portlet for folderish types")
     description = _(
         u"listingportlet_help_add",
