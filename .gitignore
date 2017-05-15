@@ -15,6 +15,7 @@ local.cfg
 *.pyc
 .Python
 include
-lib
+lib*
 mailqueue
 *.mo
+pip*

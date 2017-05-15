@@ -39,6 +39,7 @@ setup(
         'archetypes': ['Products.ATContentTypes', ],
         'dexterity': ['plone.app.contenttypes', ],
         'migration': ['Products.contentmigration', ],
+        'test': ['plone.app.testing'],
     },
     entry_points="""
       [z3c.autoinclude.plugin]
