@@ -7,6 +7,8 @@ Changes
 - Change portlets to support z3c.form and make it Plone 5 compatible (no more formlib).
   [thet]
 
+- Some egg maintenance
+  [tomgross]
 
 2.0.2 (2015-06-30)
 ------------------
