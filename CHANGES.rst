@@ -1,8 +1,8 @@
 Changes
 =======
 
-2.1 (unreleased)
-----------------
+2.1a1 (2017-05-15)
+------------------
 
 - Change portlets to support z3c.form and make it Plone 5 compatible (no more formlib).
   [thet]
