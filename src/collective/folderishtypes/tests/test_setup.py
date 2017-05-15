@@ -26,7 +26,8 @@ class TestSetup(unittest.TestCase):
         from collective.folderishtypes.interfaces import (
             ICollectiveFolderishtypesLayer)
         from plone.browserlayer import utils
-        self.assertIn(ICollectiveFolderishtypesLayer, utils.registered_layers())
+        self.assertIn(ICollectiveFolderishtypesLayer,
+                      utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
@@ -45,6 +46,8 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ICollectiveFolderishtypesLayer is removed."""
-        from collective.folderishtypes.interfaces import ICollectiveFolderishtypesLayer
+        from collective.folderishtypes.interfaces import (
+                ICollectiveFolderishtypesLayer)
         from plone.browserlayer import utils
-        self.assertNotIn(ICollectiveFolderishtypesLayer, utils.registered_layers())
+        self.assertNotIn(ICollectiveFolderishtypesLayer,
+                         utils.registered_layers())
