@@ -14,7 +14,9 @@ setup(
     long_description=long_desc,
     classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 5.1",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
     ],
     keywords='content types plone folderish',
     author='Johannes Raggam',
@@ -30,11 +32,10 @@ setup(
         'setuptools',
         'zope.interface',
         'zope.schema',
-        'plone.app.imaging',
         'zope.i18nmessageid',
     ],
     extras_require={
-        'archetypes': ['Products.ATContentTypes', ],
+        'archetypes': ['Products.ATContentTypes', 'plone.app.imaging'],
         'dexterity': ['plone.app.contenttypes', ],
         'migration': ['Products.contentmigration', ],
     },
