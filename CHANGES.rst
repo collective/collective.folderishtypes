@@ -4,6 +4,9 @@ Changes
 2.1 (unreleased)
 ----------------
 
+- Use 'getAllowedSizes' from CMFPlone if available to allow AT free use
+  [tomgross]
+
 - Change portlets to support z3c.form and make it Plone 5 compatible (no more formlib).
   [thet]
 
