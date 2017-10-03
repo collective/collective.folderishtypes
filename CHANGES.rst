@@ -4,12 +4,6 @@ Changes
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
-
-2.1a2 (2017-09-06)
-------------------
-
 - Use 'getAllowedSizes' from CMFPlone if available to allow AT free use
   [tomgross]
 
