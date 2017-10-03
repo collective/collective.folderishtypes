@@ -71,11 +71,3 @@ Tested with
 ===========
 
 Plone 4, Plone 5
-
-
-Contributors
-============
-
-- Johannes Raggam <raggam-nl [at] adm [dot] at> (Author)
-
-- Robert Niederrreiter <rnix [at] squarewave [dot] at>
