@@ -6,16 +6,19 @@ from plone.app.contenttypes.interfaces import IDocument
 from plone.app.contenttypes.interfaces import IEvent
 from plone.app.contenttypes.interfaces import INewsItem
 from plone.dexterity.content import Container
-from zope.interface import implements
+from zope.interface import implementer
 
 
+@implementer(IDocument, IFolderishDocument)
 class FolderishDocument(Container):
-    implements(IDocument, IFolderishDocument)
+    pass
 
 
+@implementer(IEvent, IFolderishEvent)
 class FolderishEvent(Container):
-    implements(IEvent, IFolderishEvent)
+    pass
 
 
+@implementer(INewsItem, IFolderishNewsItem)
 class FolderishNewsItem(Container):
-    implements(INewsItem, IFolderishNewsItem)
+    pass
