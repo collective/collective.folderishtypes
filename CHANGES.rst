@@ -4,7 +4,8 @@ Changes
 2.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add support for Python 3 and Plone 5.2.
+  [pbauer]
 
 
 2.1 (2017-10-03)
