@@ -4,7 +4,8 @@ Changes
 2.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Moved to named behaviors.
+  [iham]
 
 
 2.2.0 (2019-03-20)

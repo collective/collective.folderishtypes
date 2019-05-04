@@ -4,6 +4,6 @@
   <property name="filter_content_types">False</property>
   <property name="klass">collective.folderishtypes.dx.content.FolderishDocument</property>
   <property name="behaviors" purge="false">
-    <element value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
+    <element value="plone.constraintypes"/>
   </property>
 </object>
