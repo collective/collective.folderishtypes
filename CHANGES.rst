@@ -1,7 +1,7 @@
 Changes
 =======
 
-2.2.1 (unreleased)
+3.0.0 (2019-12-17)
 ------------------
 
 - Moved to named behaviors.
