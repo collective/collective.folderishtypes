@@ -4,7 +4,8 @@ Changes
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated gettext files support.
+  [macagua]
 
 
 3.0.0 (2019-12-17)

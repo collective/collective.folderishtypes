@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-04-17 11:41+0000\n"
+"POT-Creation-Date: 2020-05-02 10:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,53 +17,117 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.folderishtypes\n"
 
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:28
+msgid "Changes saved."
+msgstr ""
+
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:24
+msgid "Please correct the indicated errors."
+msgstr ""
+
+#: collective/folderishtypes/at/configure.zcml:31
+msgid "Remove collective.folderishtypes Archetype Types."
+msgstr ""
+
+#: collective/folderishtypes/dx/configure.zcml:24
+msgid "Remove collective.folderishtypes Dexterity configuration."
+msgstr ""
+
+#: collective/folderishtypes/dx/configure.zcml:18
+msgid "This provides Plones default types"
+msgstr ""
+
+#: collective/folderishtypes/at/configure.zcml:25
+msgid "collective.folderishtypes archetypes default profile:                      Installs Archetypes based folderish content types in                      Plone."
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:13
+msgid "collective.folderishtypes default profile: Installs                    the folderish content types in Plone."
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:21
+msgid "collective.folderishtypes portlet profile: Adds example                    portlets for Folderish Types."
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:28
+msgid "collective.folderishtypes uninstall profile"
+msgstr ""
+
+#: collective/folderishtypes/at/configure.zcml:25
+msgid "collective.folderishtypes: Archetypes Default"
+msgstr ""
+
+#: collective/folderishtypes/at/configure.zcml:31
+msgid "collective.folderishtypes: Archetypes Uninstall"
+msgstr ""
+
+#: collective/folderishtypes/dx/configure.zcml:24
+msgid "collective.folderishtypes: Dexterity configuration uninstall"
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:21
+msgid "collective.folderishtypes: Example portlets for folderish types"
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:13
+msgid "collective.folderishtypes: default"
+msgstr ""
+
+#: collective/folderishtypes/dx/configure.zcml:18
+msgid "collective.folderishtypes: plone.app.contenttypes types with folderish behavior"
+msgstr ""
+
+#: collective/folderishtypes/profiles.zcml:28
+msgid "collective.folderishtypes: uninstall"
+msgstr ""
+
 #. Default: "Select the content types that should be shown."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:35
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:52
 msgid "ctxcontents_help_allowed_types"
 msgstr ""
 
 #. Default: "Display images inline."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:45
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:65
 msgid "ctxcontents_help_display_images"
 msgstr ""
 
 #. Default: "Select, which image scale should be used for the portlet."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:52
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:75
 msgid "ctxcontents_help_image_scale"
 msgstr ""
 
 #. Default: "The title of the Contextual Contents portlet."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:28
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:42
 msgid "ctxcontents_help_title"
 msgstr ""
 
 #. Default: "Allowed Types"
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:34
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:51
 msgid "ctxcontents_label_allowed_types"
 msgstr ""
 
 #. Default: "Display Images"
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:44
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:64
 msgid "ctxcontents_label_display_images"
 msgstr ""
 
 #. Default: "Image Scale"
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:51
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:74
 msgid "ctxcontents_label_image_scale"
 msgstr ""
 
 #. Default: "Title"
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:27
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:41
 msgid "ctxcontents_label_title"
 msgstr ""
 
 #. Default: "This portlet shows the contents of folderish types."
-#: collective/folderishtypes/browser/listing_portlet.py:26
+#: collective/folderishtypes/browser/listing_portlet.py:29
 msgid "listingportlet_help_add"
 msgstr ""
 
 #. Default: "Add portlet for folderish types"
-#: collective/folderishtypes/browser/listing_portlet.py:25
+#: collective/folderishtypes/browser/listing_portlet.py:28
 msgid "listingportlet_label_add"
 msgstr ""
 
@@ -73,27 +137,21 @@ msgid "listingportlet_title"
 msgstr ""
 
 #. Default: "This portlet shows items of a specific Type which are in the current folder."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:100
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:138
 msgid "portlet_ctxcontents_help_add"
 msgstr ""
 
-#. Default: "This portlet shows items of a specific Type which are in the current folder."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:108
-msgid "portlet_ctxcontents_help_edit"
-msgstr ""
-
 #. Default: "Add Contextual Contents Portlet."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:99
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:134
 msgid "portlet_ctxcontents_label_add"
 msgstr ""
 
 #. Default: "Edit Contextual Contents Portlet."
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:107
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:154
 msgid "portlet_ctxcontents_label_edit"
 msgstr ""
 
 #. Default: "Contextual Contents Portlet"
-#: collective/folderishtypes/browser/portlet_contextual_contents.py:95
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:122
 msgid "portlet_ctxcontents_title"
 msgstr ""
-
