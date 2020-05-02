@@ -4,6 +4,9 @@ Changes
 3.0.1 (unreleased)
 ------------------
 
+- Add Transifex.net service integration to manage the translation process.
+  [macagua]
+
 - Added Spanish translation.
   [macagua]
 

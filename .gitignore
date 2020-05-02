@@ -11,6 +11,7 @@ local.cfg
 *.egg-info
 .*
 !.svn
+!.tx
 !.gitignore
 *.pyc
 .Python

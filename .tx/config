@@ -1,0 +1,16 @@
+[main]
+host = https://www.transifex.com
+
+[plone-collective.collective-folderishtypes-pot]
+file_filter = src/collective/folderishtypes/locales/<lang>/LC_MESSAGES/collective.folderishtypes.po
+minimum_perc = 0
+source_file = src/collective/folderishtypes/locales/collective.folderishtypes.pot
+source_lang = en
+type = PO
+
+[plone-collective.collective-folderishtypes-plone-pot]
+file_filter = src/collective/folderishtypes/locales/<lang>/LC_MESSAGES/plone.po
+minimum_perc = 0
+source_file = src/collective/folderishtypes/locales/plone.pot
+source_lang = en
+type = PO
