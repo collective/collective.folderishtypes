@@ -1,0 +1,170 @@
+# Translation of collective.folderishtypes.pot to Spanish
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.folderishtypes 1.0\n"
+"POT-Creation-Date: 2020-05-02 10:08+0000\n"
+"PO-Revision-Date: 2020-05-02 06:24-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.folderishtypes\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:28
+msgid "Changes saved."
+msgstr "Los cambios han sido guardados."
+
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:24
+msgid "Please correct the indicated errors."
+msgstr "Por favor, corrija los errores indicados."
+
+#: collective/folderishtypes/at/configure.zcml:31
+msgid "Remove collective.folderishtypes Archetype Types."
+msgstr "Elimine Tipos Archetype del componente collective.folderishtypes."
+
+#: collective/folderishtypes/dx/configure.zcml:24
+msgid "Remove collective.folderishtypes Dexterity configuration."
+msgstr "Elimina configuración Dexterity de collective.folderishtypes."
+
+#: collective/folderishtypes/dx/configure.zcml:18
+msgid "This provides Plones default types"
+msgstr "Esto proporciona los tipos por defecto de Plone"
+
+#: collective/folderishtypes/at/configure.zcml:25
+msgid "collective.folderishtypes archetypes default profile:                      Installs Archetypes based folderish content types in                      Plone."
+msgstr ""
+"perfil por defecto de archetypes para collective.folderishtypes:"
+"                      Instala tipos de contenido Archetypes de carpetas "
+"basados en                      Plone."
+
+#: collective/folderishtypes/profiles.zcml:13
+msgid "collective.folderishtypes default profile: Installs                    the folderish content types in Plone."
+msgstr ""
+"perfil por defecto para collective.folderishtypes: "
+"Instala                    los tipos de contenido de carpetas en Plone."
+
+#: collective/folderishtypes/profiles.zcml:21
+msgid "collective.folderishtypes portlet profile: Adds example                    portlets for Folderish Types."
+msgstr ""
+"perfil de  portlet para collective.folderishtypes: Añade "
+"portlets                    de ejemplo para tipos de carpetas."
+
+#: collective/folderishtypes/profiles.zcml:28
+msgid "collective.folderishtypes uninstall profile"
+msgstr "collective.folderishtypes: perfil de desinstalación"
+
+#: collective/folderishtypes/at/configure.zcml:25
+msgid "collective.folderishtypes: Archetypes Default"
+msgstr "collective.folderishtypes: Archetypes por defecto"
+
+#: collective/folderishtypes/at/configure.zcml:31
+msgid "collective.folderishtypes: Archetypes Uninstall"
+msgstr "collective.folderishtypes: Desinstalación de Archetypes"
+
+#: collective/folderishtypes/dx/configure.zcml:24
+msgid "collective.folderishtypes: Dexterity configuration uninstall"
+msgstr "collective.folderishtypes: Desinstalación de la configuración Dexterity"
+
+#: collective/folderishtypes/profiles.zcml:21
+msgid "collective.folderishtypes: Example portlets for folderish types"
+msgstr "collective.folderishtypes: Ejemplo de portlets para tipos de carpetas"
+
+#: collective/folderishtypes/profiles.zcml:13
+msgid "collective.folderishtypes: default"
+msgstr "collective.folderishtypes: por defecto"
+
+#: collective/folderishtypes/dx/configure.zcml:18
+msgid "collective.folderishtypes: plone.app.contenttypes types with folderish behavior"
+msgstr ""
+"collective.folderishtypes: tipos con comportamiento de carpeta de "
+"plone.app.contenttypes"
+
+#: collective/folderishtypes/profiles.zcml:28
+msgid "collective.folderishtypes: uninstall"
+msgstr "collective.folderishtypes: desintalar"
+
+#. Default: "Select the content types that should be shown."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:52
+msgid "ctxcontents_help_allowed_types"
+msgstr "Seleccionar los tipos de contenidos que deberían mostrar."
+
+#. Default: "Display images inline."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:65
+msgid "ctxcontents_help_display_images"
+msgstr "Mostrar imágenes en línea."
+
+#. Default: "Select, which image scale should be used for the portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:75
+msgid "ctxcontents_help_image_scale"
+msgstr "Seleccione cual escala de imagen debe ser usada para el portlet."
+
+#. Default: "The title of the Contextual Contents portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:42
+msgid "ctxcontents_help_title"
+msgstr "El título del portlet Contenidos Contextual."
+
+#. Default: "Allowed Types"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:51
+msgid "ctxcontents_label_allowed_types"
+msgstr "Permitir Tipos"
+
+#. Default: "Display Images"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:64
+msgid "ctxcontents_label_display_images"
+msgstr "Mostrar Imágenes"
+
+#. Default: "Image Scale"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:74
+msgid "ctxcontents_label_image_scale"
+msgstr "Escalar Imagen"
+
+#. Default: "Title"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:41
+msgid "ctxcontents_label_title"
+msgstr "Título"
+
+#. Default: "This portlet shows the contents of folderish types."
+#: collective/folderishtypes/browser/listing_portlet.py:29
+msgid "listingportlet_help_add"
+msgstr "Este portlet muestra el contenido de tipos contenedor."
+
+#. Default: "Add portlet for folderish types"
+#: collective/folderishtypes/browser/listing_portlet.py:28
+msgid "listingportlet_label_add"
+msgstr "Añadir portlet para tipo contenedor"
+
+#. Default: "Folderish Contenttype Listing Portlet"
+#: collective/folderishtypes/browser/listing_portlet.py:21
+msgid "listingportlet_title"
+msgstr "Portlet Listar Tipo Contenedor"
+
+#. Default: "This portlet shows items of a specific Type which are in the current folder."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:138
+msgid "portlet_ctxcontents_help_add"
+msgstr ""
+"Este portlet muestra los elementos de un Tipo especifico el cual este en la "
+"actual carpeta."
+
+#. Default: "Add Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:134
+msgid "portlet_ctxcontents_label_add"
+msgstr "Añadir Portlet Contenidos Contextual."
+
+#. Default: "Edit Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:154
+msgid "portlet_ctxcontents_label_edit"
+msgstr "Editar Portlet Contenidos Contextual."
+
+#. Default: "Contextual Contents Portlet"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:122
+msgid "portlet_ctxcontents_title"
+msgstr "Portlet Contenidos Contextual"

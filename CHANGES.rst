@@ -4,6 +4,9 @@ Changes
 3.0.1 (unreleased)
 ------------------
 
+- Added Spanish translation.
+  [macagua]
+
 - Updated gettext files support.
   [macagua]
 

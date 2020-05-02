@@ -1,0 +1,241 @@
+# Translation of collective.folderishtypes.pot to Spanish
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.folderishtypes 1.0\n"
+"POT-Creation-Date: 2020-05-02 10:08+0000\n"
+"PO-Revision-Date: 2020-05-02 06:25-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:28
+msgid "Changes saved."
+msgstr "Los cambios han sido guardados."
+
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "Edit"
+msgstr "Editar"
+
+#: collective/folderishtypes/at/profiles/uninstall/types/Event.xml
+msgid "Event"
+msgstr "Evento"
+
+#: collective/folderishtypes/at/profiles/default/types/Event.xml
+msgid "Event (Old, non-folderish)"
+msgstr "Evento (Antiguo, no contenedor)"
+
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "External Edit"
+msgstr "Editar Externamente"
+
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "History"
+msgstr "Historial"
+
+#: collective/folderishtypes/at/profiles/uninstall/types/News_Item.xml
+msgid "News Item"
+msgstr "Noticia"
+
+#: collective/folderishtypes/at/profiles/default/types/News_Item.xml
+msgid "News Item (Old, non-folderish)"
+msgstr "Noticia (Antiguo, no contenedor)"
+
+#: collective/folderishtypes/at/profiles/uninstall/types/Document.xml
+msgid "Page"
+msgstr "Página"
+
+#: collective/folderishtypes/at/profiles/default/types/Document.xml
+msgid "Page (Old, non-folderish)"
+msgstr "Página (Antiguo, no contenedor)"
+
+#: collective/folderishtypes/at/skins/folderishtypes/validate_integrity.cpy:24
+msgid "Please correct the indicated errors."
+msgstr "Por favor, corrija los errores indicados."
+
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "View"
+msgstr "Ver"
+
+#. Default: "last modified"
+#: collective/folderishtypes/at/browser/folder_listing.pt:153
+#: collective/folderishtypes/at/browser/folder_summary_view.pt:85
+msgid "box_last_modified"
+msgstr "última modificación"
+
+#. Default: "Select the content types that should be shown."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:52
+msgid "ctxcontents_help_allowed_types"
+msgstr "Seleccionar los tipos de contenidos que deberían mostrar."
+
+#. Default: "Display images inline."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:65
+msgid "ctxcontents_help_display_images"
+msgstr "Mostrar imágenes en línea."
+
+#. Default: "Select, which image scale should be used for the portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:75
+msgid "ctxcontents_help_image_scale"
+msgstr "Seleccione cual escala de imagen debe ser usada para el portlet."
+
+#. Default: "The title of the Contextual Contents portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:42
+msgid "ctxcontents_help_title"
+msgstr "El título del portlet Contenidos Contextual."
+
+#. Default: "Allowed Types"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:51
+msgid "ctxcontents_label_allowed_types"
+msgstr "Permitir Tipos"
+
+#. Default: "Display Images"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:64
+msgid "ctxcontents_label_display_images"
+msgstr "Mostrar Imágenes"
+
+#. Default: "Image Scale"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:74
+msgid "ctxcontents_label_image_scale"
+msgstr "Escalar Imagen"
+
+#. Default: "Title"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:41
+msgid "ctxcontents_label_title"
+msgstr "Título"
+
+#. Default: "There are currently no items in this folder."
+#: collective/folderishtypes/at/browser/folder_listing.pt:186
+msgid "description_no_items_in_folder"
+msgstr "No hay elementos actualmente en esta carpeta."
+
+#. Default: "Standard view"
+msgid "folder_listing"
+msgstr "Vista estándar"
+
+#. Default: "A page in the site. Can contain rich text and behaves like a folder."
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+msgid "folderish_document_desc"
+msgstr "Una página en el sitio. Puede contener texto enriquecido y se comporta como una carpeta."
+
+#. Default: "Page"
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Document.xml
+msgid "folderish_document_title"
+msgstr "Página"
+
+#. Default: "Information about an upcoming event, which can be displayed in the calendar. This Event has folderish behavior."
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+msgid "folderish_event_desc"
+msgstr "Información sobre los próximos eventos, los cuales pueden ser mostrados en el calendario. Este Evento tiene comportamiento de contenedor."
+
+#. Default: "Event"
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+msgid "folderish_event_title"
+msgstr "Evento"
+
+#. Default: "An announcement that will show up on the news portlet and in the news listing with folderish behavior."
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "folderish_news_item_desc"
+msgstr "Un anuncio que aparecerá en el portlet de noticias y en la lista de noticias con comportamiento de carpeta."
+
+#. Default: "News Item"
+#: collective/folderishtypes/at/profiles/default/types/Folderish_News_Item.xml
+msgid "folderish_news_item_title"
+msgstr "Noticia"
+
+#: collective/folderishtypes/at/profiles/default/types/Folderish_Event.xml
+msgid "iCalendar"
+msgstr "iCalendar"
+
+#. Default: "by ${author}"
+#: collective/folderishtypes/at/browser/folder_listing.pt:140
+#: collective/folderishtypes/at/browser/folder_summary_view.pt:74
+msgid "label_by_author"
+msgstr "por ${author}"
+
+#. Default: "from ${start} to ${end}"
+#: collective/folderishtypes/at/browser/folder_listing.pt:116
+msgid "label_event_byline"
+msgstr "desde ${start} a ${end}"
+
+#. Default: "— ${location},"
+#: collective/folderishtypes/at/browser/folder_listing.pt:123
+msgid "label_event_byline_location"
+msgstr "— ${location},"
+
+#. Default: "${start}"
+#: collective/folderishtypes/at/browser/folder_listing.pt:89
+msgid "label_event_byline_onlyfrom"
+msgstr "${start}"
+
+#. Default: "${start} from ${starttime} to ${end}"
+#: collective/folderishtypes/at/browser/folder_listing.pt:104
+msgid "label_event_byline_samedate"
+msgstr "${start} desde ${starttime} a ${end}"
+
+#. Default: "(${location}, from ${start} to ${end})"
+#: collective/folderishtypes/at/browser/folder_summary_view.pt:51
+msgid "label_event_byline_with_location"
+msgstr "(${location}, desde ${start} a ${end})"
+
+#. Default: "(from ${start} to ${end})"
+#: collective/folderishtypes/at/browser/folder_summary_view.pt:63
+msgid "label_event_byline_without_location"
+msgstr "(desde ${start} a ${end})"
+
+#. Default: "This portlet shows the contents of folderish types."
+#: collective/folderishtypes/browser/listing_portlet.py:29
+msgid "listingportlet_help_add"
+msgstr "Este portlet muestra el contenido de tipos contenedor."
+
+#. Default: "Add portlet for folderish types"
+#: collective/folderishtypes/browser/listing_portlet.py:28
+msgid "listingportlet_label_add"
+msgstr "Añadir portlet para tipo contenedor"
+
+#. Default: "Folderish Contenttype Listing Portlet"
+#: collective/folderishtypes/browser/listing_portlet.py:21
+msgid "listingportlet_title"
+msgstr "Portlet Listar Tipo Contenedor"
+
+#. Default: "This portlet shows items of a specific Type which are in the current folder."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:138
+msgid "portlet_ctxcontents_help_add"
+msgstr "Este portlet muestra los elementos de un Tipo especifico el cual este en la actual carpeta."
+
+#. Default: "Add Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:134
+msgid "portlet_ctxcontents_label_add"
+msgstr "Añadir Portlet Contenidos Contextual."
+
+#. Default: "Edit Contextual Contents Portlet."
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:154
+msgid "portlet_ctxcontents_label_edit"
+msgstr "Editar Portlet Contenidos Contextual."
+
+#. Default: "Contextual Contents Portlet"
+#: collective/folderishtypes/browser/portlet_contextual_contents.py:122
+msgid "portlet_ctxcontents_title"
+msgstr "Portlet Contenidos Contextual"
+
+#. Default: "Read More…"
+#: collective/folderishtypes/at/browser/folder_summary_view.pt:102
+msgid "read_more"
+msgstr "Leer más..."
