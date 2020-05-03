@@ -122,5 +122,5 @@ The project is licensed under the GPLv2.
 
 .. _Plone: https://plone.org/
 .. _plone.app.folder: https://pypi.org/project/plone.app.folder/
-.. _`opening a ticket`: https://github.com/collective/collective.geo.bundle/issues
+.. _`opening a ticket`: https://github.com/collective/collective.folderishtypes/issues
 .. _documentation: https://docs.plone.org/manage/installing/installing_addons.html
