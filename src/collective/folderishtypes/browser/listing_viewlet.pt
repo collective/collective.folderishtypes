@@ -1,6 +1,6 @@
 <div class="contentsListing" tal:condition="view/available">
 <metal:listingmacro define-macro="listing">
-  <tal:block define="view nocall:context/folder_listing; listing_macro view/macros/listing">
+  <tal:block define="view nocall:context/folder_listing; listing_macro view/macros/listing|view/index/macros/listing; portal_state context/@@plone_portal_state">
     <metal:use_macro use-macro="listing_macro">
       <metal:empty metal:fill-slot="no_items_in_listing"></metal:empty>
     </metal:use_macro>
