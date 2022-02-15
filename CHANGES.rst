@@ -4,6 +4,9 @@ Changes
 3.0.1 (unreleased)
 ------------------
 
+- Fix problem with incomplete loaded z3c.caching which causes a "Unknown directive" ConfigurationError.
+  [thet]
+
 - Add Transifex.net service integration to manage the translation process.
   [macagua]
 
