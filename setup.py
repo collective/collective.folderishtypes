@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from setuptools import find_packages, setup
 
-version = "3.0.1.dev0"
+version = "3.1"
 title = "collective.folderishtypes"
 description = (
     "Folderish News Item, Document and Event as replacement for default types."  # noqa

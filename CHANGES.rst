@@ -1,8 +1,8 @@
 Changes
 =======
 
-3.0.1 (unreleased)
-------------------
+3.1 (2022-11-15)
+----------------
 
 - Fix problem with incomplete loaded z3c.caching which causes a "Unknown directive" ConfigurationError.
   [thet]
